@@ -43,6 +43,9 @@ class WatchFaceView extends WatchUi.WatchFace {
         var dateView = View.findDrawableById("DateLabel") as Text;
         dateView.setText(getDate());
 
+        var HeartRateView = View.findDrawableById("TestHeartRateLabel") as Text;
+        HeartRateView.setText(getHeartRateString());
+
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -74,3 +77,13 @@ function getDate() as String {
     );
     return dateString;
 }
+
+function getHeartRate() as Number {
+    var heartrateIterator = Toybox.ActivityMonitor.getHeartRateHistory(1, true);
+    return heartrateIterator.next().heartRate;
+}
+
+function getHeartRateString() as String {
+    return getHeartRate().format("%d");
+}
+

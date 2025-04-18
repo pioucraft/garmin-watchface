@@ -19,7 +19,9 @@ module Rez {
 
             var rez_cmp_local_text_DateLabel = new WatchUi.Text({:identifier=>"DateLabel", :color=>Graphics.COLOR_GREEN, :locX=>(416 * 0.5), :locY=>(416 * (6 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_text_HoursLabel, rez_cmp_local_text_MinutesLabel, rez_cmp_local_text_SecondsLabel, rez_cmp_local_text_DateLabel] as Array<WatchUi.Drawable>;
+            var rez_cmp_local_text_TestHeartRateLabel = new WatchUi.Text({:identifier=>"TestHeartRateLabel", :color=>Graphics.COLOR_RED, :locX=>(416 * 0.5), :locY=>(416 * (85 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+
+            return [rez_cmp_local_text_HoursLabel, rez_cmp_local_text_MinutesLabel, rez_cmp_local_text_SecondsLabel, rez_cmp_local_text_DateLabel, rez_cmp_local_text_TestHeartRateLabel] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 

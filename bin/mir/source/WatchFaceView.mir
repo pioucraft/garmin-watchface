@@ -54,9 +54,9 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_16_40
     }
     [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 27; @symbol_functiondef = [onUpdate,27,13,21]; @symbol_param<0> = [dc,27,22,24]; @symbol_param<0>_type<0> = [Dc,27,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start:
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 29 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %clockTime.1 = local;
         symbol [ clockTime %clockTime.1 29 12 21 ];
         symbol [ System %tmp.1 29 24 30 ];
@@ -67,7 +67,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         lputv %clockTime.1 %tmp.3;
         symbol [ clockTime %clockTime.1 29 12 21 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 31 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %hoursString.2 = local;
         symbol [ hoursString %hoursString.2 31 12 23 ];
         symbol [ Lang %tmp.4 31 26 30 ];
@@ -90,7 +90,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         lputv %hoursString.2 %tmp.15;
         symbol [ hoursString %hoursString.2 31 12 23 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 32 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %view.3 = local;
         symbol [ view %view.3 32 12 16 ];
         symbol [ View %tmp.17 32 19 23 ];
@@ -112,7 +112,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         symbol [ hoursString %tmp.24 33 21 32 ];
         invoke %tmp.22 %tmp.23(%tmp.24);
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 35 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %minutesString.4 = local;
         symbol [ minutesString %minutesString.4 35 12 25 ];
         symbol [ Lang %tmp.25 35 28 32 ];
@@ -135,7 +135,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         lputv %minutesString.4 %tmp.36;
         symbol [ minutesString %minutesString.4 35 12 25 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 36 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %minutesView.5 = local;
         symbol [ minutesView %minutesView.5 36 12 23 ];
         symbol [ View %tmp.38 36 26 30 ];
@@ -157,7 +157,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         symbol [ minutesString %tmp.45 37 28 41 ];
         invoke %tmp.43 %tmp.44(%tmp.45);
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 39 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %secondsString.6 = local;
         symbol [ secondsString %secondsString.6 39 12 25 ];
         symbol [ Lang %tmp.46 39 28 32 ];
@@ -180,7 +180,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         lputv %secondsString.6 %tmp.57;
         symbol [ secondsString %secondsString.6 39 12 25 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 40 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %secondsView.7 = local;
         symbol [ secondsView %secondsView.7 40 12 23 ];
         symbol [ View %tmp.59 40 26 30 ];
@@ -202,7 +202,7 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         symbol [ secondsString %tmp.66 41 28 41 ];
         invoke %tmp.64 %tmp.65(%tmp.66);
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 43 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
         %dateView.8 = local;
         symbol [ dateView %dateView.8 43 12 20 ];
         symbol [ View %tmp.68 43 23 27 ];
@@ -225,85 +225,153 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40
         %tmp.76 = getv function %tmp.75 :getDate;
         %tmp.77 = invoke %tmp.75 %tmp.76();
         invoke %tmp.73 %tmp.74(%tmp.77);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 48 8 ]
-        symbol [ View %tmp.79 48 8 12 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 46 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop" ]
+        %HeartRateView.9 = local;
+        symbol [ HeartRateView %HeartRateView.9 46 12 25 ];
+        symbol [ View %tmp.79 46 28 32 ];
         %tmp.79 = getv ? :View;
-        symbol [ onUpdate %tmp.80 48 13 21 ];
-        %tmp.80 = getv function %tmp.79 :onUpdate;
-        %tmp.81 = lgetv %dc;
-        symbol [ dc %tmp.81 48 22 24 ];
-        invoke %tmp.79 %tmp.80(%tmp.81);
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_49_4_stop:
+        symbol [ findDrawableById %tmp.80 46 33 49 ];
+        %tmp.80 = getv function %tmp.79 :findDrawableById;
+        %tmp.81 = "TestHeartRateLabel";
+        %tmp.82 = invoke %tmp.79 %tmp.80(%tmp.81);
+        %tmp.83 = as %tmp.82 Text;
+        symbol [ Text %tmp.83 46 75 79 ];
+        lputv %HeartRateView.9 %tmp.83;
+        symbol [ HeartRateView %HeartRateView.9 46 12 25 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 47 8 ]
+        %tmp.84 = lgetv %HeartRateView.9;
+        symbol [ HeartRateView %tmp.84 47 8 21 ];
+        symbol [ setText %tmp.85 47 22 29 ];
+        %tmp.85 = getv function %tmp.84 :setText;
+        %tmp.86 = self;
+        symbol [ getHeartRateString %tmp.87 47 30 48 ];
+        %tmp.87 = getv function %tmp.86 :getHeartRateString;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        invoke %tmp.84 %tmp.85(%tmp.88);
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 51 8 ]
+        symbol [ View %tmp.90 51 8 12 ];
+        %tmp.90 = getv ? :View;
+        symbol [ onUpdate %tmp.91 51 13 21 ];
+        %tmp.91 = getv function %tmp.90 :onUpdate;
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 51 22 24 ];
+        invoke %tmp.90 %tmp.91(%tmp.92);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_27_40_52_4_stop:
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 54; @symbol_functiondef = [onHide,54,13,19]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 57; @symbol_functiondef = [onHide,57,13,19]; ]
     function onHide() as Void {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 58; @symbol_functiondef = [onExitSleep,58,13,24]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 61; @symbol_functiondef = [onExitSleep,61,13,24]; ]
     function onExitSleep() as Void {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 62; @symbol_functiondef = [onEnterSleep,62,13,25]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 65; @symbol_functiondef = [onEnterSleep,65,13,25]; ]
     function onEnterSleep() as Void {
     }
 }
-[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 67; @symbol_functiondef = [getDate,67,9,16]; @symbol_return<0> = [String,67,22,28]; ]
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 70; @symbol_functiondef = [getDate,70,9,16]; @symbol_return<0> = [String,70,22,28]; ]
 function getDate() as String {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 68 3 ]
-    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_stop" ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 71 3 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_stop" ]
     %now.1 = local;
-    symbol [ now %now.1 68 7 10 ];
-    symbol [ Gregorian %tmp.1 68 13 22 ];
+    symbol [ now %now.1 71 7 10 ];
+    symbol [ Gregorian %tmp.1 71 13 22 ];
     %tmp.1 = getm $.Toybox.Time.Gregorian;
-    symbol [ info %tmp.2 68 23 27 ];
+    symbol [ info %tmp.2 71 23 27 ];
     %tmp.2 = getv function %tmp.1 :info;
-    symbol [ Time %tmp.3 68 28 32 ];
+    symbol [ Time %tmp.3 71 28 32 ];
     %tmp.3 = getm $.Toybox.Time;
-    symbol [ now %tmp.4 68 33 36 ];
+    symbol [ now %tmp.4 71 33 36 ];
     %tmp.4 = getv function %tmp.3 :now;
     %tmp.5 = invoke %tmp.3 %tmp.4();
-    symbol [ Time %tmp.6 68 40 44 ];
+    symbol [ Time %tmp.6 71 40 44 ];
     %tmp.6 = getm $.Toybox.Time;
-    symbol [ FORMAT_MEDIUM %tmp.7 68 45 58 ];
+    symbol [ FORMAT_MEDIUM %tmp.7 71 45 58 ];
     %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
     %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
     lputv %now.1 %tmp.8;
-    symbol [ now %now.1 68 7 10 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 69 3 ]
-    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_stop" ]
+    symbol [ now %now.1 71 7 10 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 72 3 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_stop" ]
     %dateString.2 = local;
-    symbol [ dateString %dateString.2 69 7 17 ];
-    symbol [ Lang %tmp.9 69 20 24 ];
+    symbol [ dateString %dateString.2 72 7 17 ];
+    symbol [ Lang %tmp.9 72 20 24 ];
     %tmp.9 = getm $.Toybox.Lang;
-    symbol [ format %tmp.10 69 25 31 ];
+    symbol [ format %tmp.10 72 25 31 ];
     %tmp.10 = getv function %tmp.9 :format;
     %tmp.11 = "$1$ $2$ $3$";
     %tmp.12 = newa 3;
     %tmp.13 = lgetv %now.1;
-    symbol [ now %tmp.13 70 12 15 ];
-    symbol [ day_of_week %tmp.14 70 16 27 ];
+    symbol [ now %tmp.13 73 12 15 ];
+    symbol [ day_of_week %tmp.14 73 16 27 ];
     %tmp.14 = getv %tmp.13 :day_of_week;
     %tmp.15 = dup %tmp.12;
     %tmp.16 = aputv %tmp.15 0 %tmp.14;
     %tmp.17 = lgetv %now.1;
-    symbol [ now %tmp.17 71 12 15 ];
-    symbol [ day %tmp.18 71 16 19 ];
+    symbol [ now %tmp.17 74 12 15 ];
+    symbol [ day %tmp.18 74 16 19 ];
     %tmp.18 = getv %tmp.17 :day;
     %tmp.19 = dup %tmp.16;
     %tmp.20 = aputv %tmp.19 1 %tmp.18;
     %tmp.21 = lgetv %now.1;
-    symbol [ now %tmp.21 72 12 15 ];
-    symbol [ month %tmp.22 72 16 21 ];
+    symbol [ now %tmp.21 75 12 15 ];
+    symbol [ month %tmp.22 75 16 21 ];
     %tmp.22 = getv %tmp.21 :month;
     %tmp.23 = dup %tmp.20;
     %tmp.24 = aputv %tmp.23 2 %tmp.22;
     %tmp.25 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.24);
     lputv %dateString.2 %tmp.25;
-    symbol [ dateString %dateString.2 69 7 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 75 4 ]
+    symbol [ dateString %dateString.2 72 7 17 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 78 4 ]
     %tmp.26 = lgetv %dateString.2;
-    symbol [ dateString %tmp.26 75 11 21 ];
+    symbol [ dateString %tmp.26 78 11 21 ];
     ret %tmp.26;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_67_29_76_0_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_70_29_79_0_stop:
+}
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 81; @symbol_functiondef = [getHeartRate,81,9,21]; @symbol_return<0> = [Number,81,27,33]; ]
+function getHeartRate() as Number {
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_81_34_84_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 82 4 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_81_34_84_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_81_34_84_0_stop" ]
+    %heartrateIterator.1 = local;
+    symbol [ heartrateIterator %heartrateIterator.1 82 8 25 ];
+    symbol [ Toybox %tmp.2 82 28 34 ];
+    %tmp.2 = getv ? :Toybox;
+    symbol [ ActivityMonitor %tmp.3 82 35 50 ];
+    %tmp.3 = getv %tmp.2 :ActivityMonitor;
+    symbol [ getHeartRateHistory %tmp.4 82 51 70 ];
+    %tmp.4 = getv function %tmp.3 :getHeartRateHistory;
+    %tmp.5 = 1;
+    %tmp.6 = true;
+    %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6);
+    lputv %heartrateIterator.1 %tmp.7;
+    symbol [ heartrateIterator %heartrateIterator.1 82 8 25 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 83 4 ]
+    %tmp.8 = lgetv %heartrateIterator.1;
+    symbol [ heartrateIterator %tmp.8 83 11 28 ];
+    symbol [ next %tmp.9 83 29 33 ];
+    %tmp.9 = getv function %tmp.8 :next;
+    %tmp.10 = invoke %tmp.8 %tmp.9();
+    symbol [ heartRate %tmp.11 83 36 45 ];
+    %tmp.11 = getv %tmp.10 :heartRate;
+    ret %tmp.11;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_81_34_84_0_stop:
+}
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 86; @symbol_functiondef = [getHeartRateString,86,9,27]; @symbol_return<0> = [String,86,33,39]; ]
+function getHeartRateString() as String {
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_86_40_88_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 87 4 ]
+    %tmp.1 = self;
+    symbol [ getHeartRate %tmp.2 87 11 23 ];
+    %tmp.2 = getv function %tmp.1 :getHeartRate;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    symbol [ format %tmp.4 87 26 32 ];
+    %tmp.4 = getv function %tmp.3 :format;
+    %tmp.5 = "%d";
+    %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+    ret %tmp.6;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_86_40_88_0_stop:
 }
 [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 1; ]
 <init> {
