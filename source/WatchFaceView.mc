@@ -24,9 +24,14 @@ class WatchFaceView extends WatchUi.WatchFace {
     function onUpdate(dc as Dc) as Void {
         // Get and show the current time
         var clockTime = System.getClockTime();
+
         var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
         var view = View.findDrawableById("TimeLabel") as Text;
         view.setText(timeString);
+
+        var secondsString = Lang.format("$1$", [clockTime.sec]);
+        var secondsView = View.findDrawableById("SecondsLabel") as Text;
+        secondsView.setText(secondsString);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
