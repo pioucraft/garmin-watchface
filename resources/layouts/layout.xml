@@ -1,11 +1,9 @@
 <layout id="WatchFace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <label id="HoursLabel" x="15%" y="10%" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_LEFT"  />
-    <label id="MinutesLabel" x="15%" y="32%" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_LEFT"  />
-    <label id="SecondsLabel" x="18%" y="60%" font="Graphics.FONT_SYSTEM_NUMBER_MILD" justification="Graphics.TEXT_JUSTIFY_LEFT"  />
-    <label id="DateLabel" x="center" y="6%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="TimeLabel" x="center" y="30%" font="Graphics.FONT_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER"  />
+    <label id="SecondsLabel" x="87%" y="50%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT"  />
+    <label id="DateLabel" x="center" y="15%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_CENTER" />
 
-    <label id="StepsLabel" x="55%" y="55%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
-    <label id="FloorsLabel" x="55%" y="65%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_PURPLE" />
+    <label id="StepsLabel" x="center" y="73%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
 
     <label id="TestHeartRateLabel" x="center" y="85%" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_RED" />
 </layout>

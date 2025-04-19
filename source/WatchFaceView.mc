@@ -29,13 +29,9 @@ class WatchFaceView extends WatchUi.WatchFace {
         // Get and show the current time
         var clockTime = System.getClockTime();
 
-        var hoursString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
-        var view = View.findDrawableById("HoursLabel") as Text;
-        view.setText(hoursString);
-
-        var minutesString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        var minutesView = View.findDrawableById("MinutesLabel") as Text;
-        minutesView.setText(minutesString);
+        var TimeView = View.findDrawableById("TimeLabel") as Text;
+        var timeString = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        TimeView.setText(timeString);
 
         var secondsString = Lang.format("$1$", [clockTime.sec.format("%02d")]);
         var secondsView = View.findDrawableById("SecondsLabel") as Text;
@@ -55,17 +51,10 @@ class WatchFaceView extends WatchUi.WatchFace {
         if (steps == null) {
             steps = 0;
         }
-        var fillPercentage = 1.toFloat() - (steps.toFloat() / stepsGoal.toFloat());
+        var fillPercentage = (steps.toFloat() / stepsGoal.toFloat());
 
         StepsView.setText(Lang.format("$1$ steps", [steps]));
 
-
-        var FloorsView = View.findDrawableById("FloorsLabel") as Text;
-        var floors = Toybox.ActivityMonitor.getInfo().floorsClimbed;
-        if (floors == null) {
-            floors = 0;
-        }
-        FloorsView.setText(Lang.format("$1$ floors", [floors]));
 
 
 
@@ -77,15 +66,6 @@ class WatchFaceView extends WatchUi.WatchFace {
 
         View.onUpdate(dc);
 
-        // Calculate the angle for the filled portion
-        // Define center point of the circle
-        var centerX = 290;
-        var centerY = 145;
-
-        // Radius of the circular arc
-        var radius = 75;
-
-
 
         // Clamp value between 0 and 1
         if (fillPercentage < 0) {
@@ -94,24 +74,52 @@ class WatchFaceView extends WatchUi.WatchFace {
             fillPercentage = 1;
         }
 
-        // Calculate the angle for the filled portion
-        var filledAngle = 360 * fillPercentage;
+        // Define rectangle properties (adjust coordinates and size as needed)
+        var rectWidth = dc.getWidth() * 0.6; // Increased width to 80% of screen width
+        var rectHeight = 25;
+        var rectX = (dc.getWidth() - rectWidth) / 2; // Centered horizontally
+        // Position it vertically below other elements, adjust '150' as needed
+        var rectY = 270;
+        var cornerRadius = 4; // Define the radius for rounded corners
 
-        // Thicken the circle outline
-        dc.setPenWidth(6);
+        // Calculate the width of the filled portion based on completion
+        // fillPercentage currently represents the *unfilled* part (1.0 - steps/goal)
+        // So, the filled part is (1.0 - fillPercentage)
+        var filledRatio = fillPercentage;
+        var filledWidth = (rectWidth * filledRatio).toNumber();
 
-    // Special cases
- 
-        // First, draw the black (unfilled) arc from filledAngle to 360
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.drawArc(centerX, centerY, radius, Graphics.ARC_CLOCKWISE, filledAngle, 360);
+        // Draw the background/outline of the progress bar with rounded corners
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        // Draw a thicker border by drawing multiple rectangles with small offsets
+        var borderThickness = 3; // Adjust for desired border width
+        for (var i = 0; i < borderThickness; i += 1) {
+            dc.drawRoundedRectangle(
+                rectX - i * 0.5, 
+                rectY - i * 0.5, 
+                rectWidth + i, 
+                rectHeight + i, 
+                cornerRadius + i * 0.5
+            );
+        }
 
-        // Then, draw the blue (filled) arc from 0 to filledAngle
-        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
-        dc.drawArc(centerX, centerY, radius, Graphics.ARC_CLOCKWISE, 0, filledAngle);
-
-
-        dc.drawText(centerX, centerY - 15, Graphics.FONT_XTINY, Lang.format("$1$ steps", [stepsGoal]), Graphics.TEXT_JUSTIFY_CENTER);        
+        // Draw the filled portion from left to right with rounded corners
+        // Note: fillRoundedRectangle fills the entire shape. We need to clip or draw carefully.
+        // A common approach is to fill the whole rounded rect first, then draw the unfilled part over it,
+        // or calculate the clipping region. For simplicity here, we'll fill a potentially non-rounded
+        // rectangle inside, which might not look perfectly rounded on the right edge when partially filled.
+        // For a perfect rounded fill, more complex drawing logic (like clipping) is needed.
+        if (filledWidth > 0) {
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+            // Fill a rectangle for the filled portion. For perfect rounded corners on the fill,
+            // you might need to use clipping or draw two rounded rectangles (background and foreground).
+            // This simple fillRectangle will have sharp corners on the right side when partially filled.
+             if (filledWidth >= rectWidth - cornerRadius) { // If close to full, use fillRoundedRectangle
+             dc.fillRoundedRectangle(rectX, rectY, filledWidth, rectHeight, cornerRadius);
+             } else { // Otherwise, fill a standard rectangle (might look slightly off at the rounded end)
+             dc.fillRectangle(rectX, rectY, filledWidth, rectHeight);
+             }
+        }
+        
 
     }
 

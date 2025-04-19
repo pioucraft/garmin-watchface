@@ -11,21 +11,17 @@ module Rez {
 
     module Layouts {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_HoursLabel = new WatchUi.Text({:identifier=>"HoursLabel", :locX=>(416 * (15 / 100.0)), :locY=>(416 * (10 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_NUMBER_THAI_HOT});
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :locX=>(416 * 0.5), :locY=>(416 * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_THAI_HOT});
 
-            var rez_cmp_local_text_MinutesLabel = new WatchUi.Text({:identifier=>"MinutesLabel", :locX=>(416 * (15 / 100.0)), :locY=>(416 * (32 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_NUMBER_THAI_HOT});
+            var rez_cmp_local_text_SecondsLabel = new WatchUi.Text({:identifier=>"SecondsLabel", :locX=>(416 * (87 / 100.0)), :locY=>(416 * (50 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_SecondsLabel = new WatchUi.Text({:identifier=>"SecondsLabel", :locX=>(416 * (18 / 100.0)), :locY=>(416 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_NUMBER_MILD});
+            var rez_cmp_local_text_DateLabel = new WatchUi.Text({:identifier=>"DateLabel", :locX=>(416 * 0.5), :locY=>(416 * (15 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_DateLabel = new WatchUi.Text({:identifier=>"DateLabel", :locX=>(416 * 0.5), :locY=>(416 * (6 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
-
-            var rez_cmp_local_text_StepsLabel = new WatchUi.Text({:identifier=>"StepsLabel", :color=>Graphics.COLOR_WHITE, :locX=>(416 * (55 / 100.0)), :locY=>(416 * (55 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_TINY});
-
-            var rez_cmp_local_text_FloorsLabel = new WatchUi.Text({:identifier=>"FloorsLabel", :color=>Graphics.COLOR_PURPLE, :locX=>(416 * (55 / 100.0)), :locY=>(416 * (65 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_StepsLabel = new WatchUi.Text({:identifier=>"StepsLabel", :color=>Graphics.COLOR_WHITE, :locX=>(416 * 0.5), :locY=>(416 * (73 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
             var rez_cmp_local_text_TestHeartRateLabel = new WatchUi.Text({:identifier=>"TestHeartRateLabel", :color=>Graphics.COLOR_RED, :locX=>(416 * 0.5), :locY=>(416 * (85 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_text_HoursLabel, rez_cmp_local_text_MinutesLabel, rez_cmp_local_text_SecondsLabel, rez_cmp_local_text_DateLabel, rez_cmp_local_text_StepsLabel, rez_cmp_local_text_FloorsLabel, rez_cmp_local_text_TestHeartRateLabel] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_text_TimeLabel, rez_cmp_local_text_SecondsLabel, rez_cmp_local_text_DateLabel, rez_cmp_local_text_StepsLabel, rez_cmp_local_text_TestHeartRateLabel] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
