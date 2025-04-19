@@ -15,9 +15,9 @@ module Rez {
 
             var rez_cmp_local_text_MinutesLabel = new WatchUi.Text({:identifier=>"MinutesLabel", :locX=>(416 * (15 / 100.0)), :locY=>(416 * (32 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_NUMBER_THAI_HOT});
 
-            var rez_cmp_local_text_SecondsLabel = new WatchUi.Text({:identifier=>"SecondsLabel", :color=>Graphics.COLOR_GREEN, :locX=>(416 * (18 / 100.0)), :locY=>(416 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_NUMBER_MILD});
+            var rez_cmp_local_text_SecondsLabel = new WatchUi.Text({:identifier=>"SecondsLabel", :locX=>(416 * (18 / 100.0)), :locY=>(416 * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_NUMBER_MILD});
 
-            var rez_cmp_local_text_DateLabel = new WatchUi.Text({:identifier=>"DateLabel", :color=>Graphics.COLOR_GREEN, :locX=>(416 * 0.5), :locY=>(416 * (6 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_DateLabel = new WatchUi.Text({:identifier=>"DateLabel", :locX=>(416 * 0.5), :locY=>(416 * (6 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
             var rez_cmp_local_text_TestHeartRateLabel = new WatchUi.Text({:identifier=>"TestHeartRateLabel", :color=>Graphics.COLOR_RED, :locX=>(416 * 0.5), :locY=>(416 * (85 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
