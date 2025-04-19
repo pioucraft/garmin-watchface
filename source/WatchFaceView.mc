@@ -49,10 +49,14 @@ class WatchFaceView extends WatchUi.WatchFace {
 
         var StepsView = View.findDrawableById("StepsLabel") as Text;
         var steps = Toybox.ActivityMonitor.getInfo().steps;
+        
         var stepsGoal = Toybox.ActivityMonitor.getInfo().stepGoal;
+
         if (steps == null) {
             steps = 0;
         }
+        var fillPercentage = 1.toFloat() - (steps.toFloat() / stepsGoal.toFloat());
+
         StepsView.setText(Lang.format("$1$ steps", [steps]));
 
 
@@ -65,10 +69,50 @@ class WatchFaceView extends WatchUi.WatchFace {
 
 
 
-        // Call the parent onUpdate function to redraw the layout
+
+        // dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+        // dc.fillCircle(50, 100, 75);
+
+        // Define center point of the circle
+
         View.onUpdate(dc);
 
-         
+        // Calculate the angle for the filled portion
+        // Define center point of the circle
+        var centerX = 290;
+        var centerY = 145;
+
+        // Radius of the circular arc
+        var radius = 75;
+
+
+
+        // Clamp value between 0 and 1
+        if (fillPercentage < 0) {
+            fillPercentage = 0;
+        } else if (fillPercentage > 1) {
+            fillPercentage = 1;
+        }
+
+        // Calculate the angle for the filled portion
+        var filledAngle = 360 * fillPercentage;
+
+        // Thicken the circle outline
+        dc.setPenWidth(6);
+
+    // Special cases
+ 
+        // First, draw the black (unfilled) arc from filledAngle to 360
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.drawArc(centerX, centerY, radius, Graphics.ARC_CLOCKWISE, filledAngle, 360);
+
+        // Then, draw the blue (filled) arc from 0 to filledAngle
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLACK);
+        dc.drawArc(centerX, centerY, radius, Graphics.ARC_CLOCKWISE, 0, filledAngle);
+
+
+        dc.drawText(centerX, centerY - 15, Graphics.FONT_XTINY, Lang.format("$1$ steps", [stepsGoal]), Graphics.TEXT_JUSTIFY_CENTER);        
+
     }
 
     // Called when this View is removed from the screen. Save the

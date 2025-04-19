@@ -2,22 +2,22 @@
 <debugInfo>
     <manifest filename="/Users/nathangasser/git/pioucraft/garmin-watchface/manifest.xml"/>
     <pcToLineNum>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="1" lineNum="152" parent="globals" pc="268435460" symbol="getHeartRateString"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="1" lineNum="153" parent="globals" pc="268435470" symbol="getHeartRateString"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="1" lineNum="153" parent="globals" pc="268435460" symbol="getHeartRateString"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="1" lineNum="154" parent="globals" pc="268435470" symbol="getHeartRateString"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="2" lineNum="26" parent="globals" pc="268435490" symbol="getApp"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="2" lineNum="27" parent="globals" pc="268435500" symbol="getApp"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="3" lineNum="10" parent="globals/WatchFaceView" pc="268435511" symbol="&lt;init&gt;"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435523" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="133" parent="globals" pc="268435543" symbol="getDate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="134" parent="globals" pc="268435554" symbol="getDate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="135" parent="globals" pc="268435580" symbol="getDate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="141" parent="globals" pc="268435630" symbol="getDate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="134" parent="globals" pc="268435543" symbol="getDate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="135" parent="globals" pc="268435554" symbol="getDate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="136" parent="globals" pc="268435580" symbol="getDate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="5" lineNum="142" parent="globals" pc="268435630" symbol="getDate"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="6" lineNum="5" parent="globals/WatchFaceApp" pc="268435633" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="144" parent="globals" pc="268435645" symbol="getHeartRate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="145" parent="globals" pc="268435656" symbol="getHeartRate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="146" parent="globals" pc="268435673" symbol="getHeartRate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="147" parent="globals" pc="268435679" symbol="getHeartRate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="149" parent="globals" pc="268435685" symbol="getHeartRate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="145" parent="globals" pc="268435645" symbol="getHeartRate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="146" parent="globals" pc="268435656" symbol="getHeartRate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="147" parent="globals" pc="268435673" symbol="getHeartRate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="148" parent="globals" pc="268435679" symbol="getHeartRate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="7" lineNum="150" parent="globals" pc="268435685" symbol="getHeartRate"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="10" lineNum="17" parent="globals/WatchFaceView" pc="268435688" symbol="onLayout"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="10" lineNum="18" parent="globals/WatchFaceView" pc="268435690" symbol="onLayout"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="12" lineNum="12" parent="globals/WatchFaceView" pc="268435724" symbol="initialize"/>
@@ -39,53 +39,46 @@
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="48" parent="globals/WatchFaceView" pc="268436061" symbol="onUpdate"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="50" parent="globals/WatchFaceView" pc="268436077" symbol="onUpdate"/>
         <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="51" parent="globals/WatchFaceView" pc="268436101" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="52" parent="globals/WatchFaceView" pc="268436118" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="53" parent="globals/WatchFaceView" pc="268436135" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="54" parent="globals/WatchFaceView" pc="268436141" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="56" parent="globals/WatchFaceView" pc="268436147" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="59" parent="globals/WatchFaceView" pc="268436183" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="60" parent="globals/WatchFaceView" pc="268436207" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="61" parent="globals/WatchFaceView" pc="268436224" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="62" parent="globals/WatchFaceView" pc="268436230" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="64" parent="globals/WatchFaceView" pc="268436236" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="67" parent="globals/WatchFaceView" pc="268436272" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="68" parent="globals/WatchFaceView" pc="268436276" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="69" parent="globals/WatchFaceView" pc="268436280" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="70" parent="globals/WatchFaceView" pc="268436298" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="71" parent="globals/WatchFaceView" pc="268436308" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="74" parent="globals/WatchFaceView" pc="268436312" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="76" parent="globals/WatchFaceView" pc="268436325" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="77" parent="globals/WatchFaceView" pc="268436343" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="78" parent="globals/WatchFaceView" pc="268436354" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="83" parent="globals/WatchFaceView" pc="268436364" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="84" parent="globals/WatchFaceView" pc="268436372" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="87" parent="globals/WatchFaceView" pc="268436379" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="88" parent="globals/WatchFaceView" pc="268436391" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="92" parent="globals/WatchFaceView" pc="268436402" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="95" parent="globals/WatchFaceView" pc="268436414" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="96" parent="globals/WatchFaceView" pc="268436430" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="99" parent="globals/WatchFaceView" pc="268436452" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="100" parent="globals/WatchFaceView" pc="268436459" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="101" parent="globals/WatchFaceView" pc="268436475" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="105" parent="globals/WatchFaceView" pc="268436503" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="106" parent="globals/WatchFaceView" pc="268436515" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="107" parent="globals/WatchFaceView" pc="268436531" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="114" parent="globals/WatchFaceView" pc="268436553" symbol="onUpdate"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="15" lineNum="12" parent="globals/WatchFaceApp" pc="268436574" symbol="onStart"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="16" lineNum="20" parent="globals/WatchFaceApp" pc="268436577" symbol="getInitialView"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="16" lineNum="21" parent="globals/WatchFaceApp" pc="268436579" symbol="getInitialView"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="17" lineNum="7" parent="globals/WatchFaceApp" pc="268436609" symbol="initialize"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="17" lineNum="8" parent="globals/WatchFaceApp" pc="268436611" symbol="initialize"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="18" lineNum="16" parent="globals/WatchFaceApp" pc="268436624" symbol="onStop"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="13" parent="globals/Rez/Layouts" pc="268436627" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="14" parent="globals/Rez/Layouts" pc="268436638" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="16" parent="globals/Rez/Layouts" pc="268436716" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="18" parent="globals/Rez/Layouts" pc="268436794" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="20" parent="globals/Rez/Layouts" pc="268436872" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="22" parent="globals/Rez/Layouts" pc="268436950" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="24" parent="globals/Rez/Layouts" pc="268437039" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="26" parent="globals/Rez/Layouts" pc="268437128" symbol="WatchFace"/>
-        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="28" parent="globals/Rez/Layouts" pc="268437217" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="53" parent="globals/WatchFaceView" pc="268436118" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="55" parent="globals/WatchFaceView" pc="268436135" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="56" parent="globals/WatchFaceView" pc="268436141" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="58" parent="globals/WatchFaceView" pc="268436147" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="60" parent="globals/WatchFaceView" pc="268436173" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="63" parent="globals/WatchFaceView" pc="268436209" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="64" parent="globals/WatchFaceView" pc="268436233" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="65" parent="globals/WatchFaceView" pc="268436250" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="66" parent="globals/WatchFaceView" pc="268436256" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="68" parent="globals/WatchFaceView" pc="268436262" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="78" parent="globals/WatchFaceView" pc="268436298" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="82" parent="globals/WatchFaceView" pc="268436318" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="83" parent="globals/WatchFaceView" pc="268436323" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="86" parent="globals/WatchFaceView" pc="268436328" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="91" parent="globals/WatchFaceView" pc="268436332" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="92" parent="globals/WatchFaceView" pc="268436339" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="93" parent="globals/WatchFaceView" pc="268436345" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="94" parent="globals/WatchFaceView" pc="268436353" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="98" parent="globals/WatchFaceView" pc="268436360" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="101" parent="globals/WatchFaceView" pc="268436368" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="106" parent="globals/WatchFaceView" pc="268436380" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="107" parent="globals/WatchFaceView" pc="268436392" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="110" parent="globals/WatchFaceView" pc="268436415" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="111" parent="globals/WatchFaceView" pc="268436430" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" id="14" lineNum="114" parent="globals/WatchFaceView" pc="268436451" symbol="onUpdate"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="15" lineNum="12" parent="globals/WatchFaceApp" pc="268436498" symbol="onStart"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="16" lineNum="20" parent="globals/WatchFaceApp" pc="268436501" symbol="getInitialView"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="16" lineNum="21" parent="globals/WatchFaceApp" pc="268436503" symbol="getInitialView"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="17" lineNum="7" parent="globals/WatchFaceApp" pc="268436533" symbol="initialize"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="17" lineNum="8" parent="globals/WatchFaceApp" pc="268436535" symbol="initialize"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceApp.mc" id="18" lineNum="16" parent="globals/WatchFaceApp" pc="268436548" symbol="onStop"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="13" parent="globals/Rez/Layouts" pc="268436551" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="14" parent="globals/Rez/Layouts" pc="268436562" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="16" parent="globals/Rez/Layouts" pc="268436640" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="18" parent="globals/Rez/Layouts" pc="268436718" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="20" parent="globals/Rez/Layouts" pc="268436796" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="22" parent="globals/Rez/Layouts" pc="268436874" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="24" parent="globals/Rez/Layouts" pc="268436963" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="26" parent="globals/Rez/Layouts" pc="268437052" symbol="WatchFace"/>
+        <entry filename="/Users/nathangasser/git/pioucraft/garmin-watchface/bin/gen/006-B3943-00/source/Rez.mcgen" id="19" lineNum="28" parent="globals/Rez/Layouts" pc="268437141" symbol="WatchFace"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -139,37 +132,34 @@
         <entry endPc="268435632" name="dateString" stackId="2" startPc="268435554"/>
         <entry endPc="268435687" name="heartRate" stackId="1" startPc="268435656"/>
         <entry arg="true" endPc="268435723" name="dc" stackId="1" startPc="268435688"/>
-        <entry arg="true" endPc="268436573" name="dc" stackId="1" startPc="268435739"/>
-        <entry endPc="268436572" name="clockTime" stackId="2" startPc="268435742"/>
-        <entry endPc="268436572" name="hoursString" stackId="3" startPc="268435742"/>
-        <entry endPc="268436572" name="view" stackId="4" startPc="268435742"/>
-        <entry endPc="268436572" name="minutesString" stackId="5" startPc="268435742"/>
-        <entry endPc="268436572" name="minutesView" stackId="6" startPc="268435742"/>
-        <entry endPc="268436572" name="secondsString" stackId="7" startPc="268435742"/>
-        <entry endPc="268436572" name="secondsView" stackId="8" startPc="268435742"/>
-        <entry endPc="268436572" name="dateView" stackId="9" startPc="268435742"/>
-        <entry endPc="268436572" name="HeartRateView" stackId="10" startPc="268435742"/>
-        <entry endPc="268436572" name="StepsView" stackId="11" startPc="268435742"/>
-        <entry endPc="268436572" name="steps" stackId="12" startPc="268435742"/>
-        <entry endPc="268436572" name="stepsGoal" stackId="13" startPc="268435742"/>
-        <entry endPc="268436572" name="FloorsView" stackId="14" startPc="268435742"/>
-        <entry endPc="268436572" name="floors" stackId="15" startPc="268435742"/>
-        <entry endPc="268436572" name="radius" stackId="16" startPc="268435742"/>
-        <entry endPc="268436572" name="penWidth" stackId="17" startPc="268435742"/>
-        <entry endPc="268436572" name="centerX" stackId="18" startPc="268435742"/>
-        <entry endPc="268436572" name="centerY" stackId="19" startPc="268435742"/>
-        <entry endPc="268436572" name="startAngle" stackId="20" startPc="268435742"/>
-        <entry endPc="268436499" name="progressRatio" stackId="21" startPc="268436325"/>
-        <entry endPc="268436499" name="progressAngle" stackId="22" startPc="268436325"/>
-        <entry endPc="268436499" name="endAngle" stackId="23" startPc="268436325"/>
-        <entry arg="true" endPc="268437256" name="dc" stackId="1" startPc="268436627"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_HoursLabel" stackId="2" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_MinutesLabel" stackId="3" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_SecondsLabel" stackId="4" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_DateLabel" stackId="5" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_StepsLabel" stackId="6" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_FloorsLabel" stackId="7" startPc="268436638"/>
-        <entry endPc="268437256" name="rez_cmp_local_text_TestHeartRateLabel" stackId="8" startPc="268436638"/>
+        <entry arg="true" endPc="268436497" name="dc" stackId="1" startPc="268435739"/>
+        <entry endPc="268436496" name="clockTime" stackId="2" startPc="268435742"/>
+        <entry endPc="268436496" name="hoursString" stackId="3" startPc="268435742"/>
+        <entry endPc="268436496" name="view" stackId="4" startPc="268435742"/>
+        <entry endPc="268436496" name="minutesString" stackId="5" startPc="268435742"/>
+        <entry endPc="268436496" name="minutesView" stackId="6" startPc="268435742"/>
+        <entry endPc="268436496" name="secondsString" stackId="7" startPc="268435742"/>
+        <entry endPc="268436496" name="secondsView" stackId="8" startPc="268435742"/>
+        <entry endPc="268436496" name="dateView" stackId="9" startPc="268435742"/>
+        <entry endPc="268436496" name="HeartRateView" stackId="10" startPc="268435742"/>
+        <entry endPc="268436496" name="StepsView" stackId="11" startPc="268435742"/>
+        <entry endPc="268436496" name="steps" stackId="12" startPc="268435742"/>
+        <entry endPc="268436496" name="stepsGoal" stackId="13" startPc="268435742"/>
+        <entry endPc="268436496" name="fillPercentage" stackId="14" startPc="268435742"/>
+        <entry endPc="268436496" name="FloorsView" stackId="15" startPc="268435742"/>
+        <entry endPc="268436496" name="floors" stackId="16" startPc="268435742"/>
+        <entry endPc="268436496" name="centerX" stackId="17" startPc="268435742"/>
+        <entry endPc="268436496" name="centerY" stackId="18" startPc="268435742"/>
+        <entry endPc="268436496" name="radius" stackId="19" startPc="268435742"/>
+        <entry endPc="268436496" name="filledAngle" stackId="20" startPc="268435742"/>
+        <entry arg="true" endPc="268437180" name="dc" stackId="1" startPc="268436551"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_HoursLabel" stackId="2" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_MinutesLabel" stackId="3" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_SecondsLabel" stackId="4" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_DateLabel" stackId="5" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_StepsLabel" stackId="6" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_FloorsLabel" stackId="7" startPc="268436562"/>
+        <entry endPc="268437180" name="rez_cmp_local_text_TestHeartRateLabel" stackId="8" startPc="268436562"/>
     </localVars>
     <deviceInfo deviceVersion="6dcd7b8e5f5b4076e877ee6ed9889becbccbd260" partNumber="006-B3943-00"/>
     <annotations>
@@ -226,7 +216,7 @@
         <functionEntry accessMode="public" name="onHide" parent="WatchFaceView">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436573" name="onUpdate" parent="WatchFaceView" startPc="268435739">
+        <functionEntry accessMode="public" endPc="268436497" name="onUpdate" parent="WatchFaceView" startPc="268435739">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
@@ -239,21 +229,21 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436576" name="onStart" parent="WatchFaceApp" startPc="268436574">
+        <functionEntry accessMode="public" endPc="268436500" name="onStart" parent="WatchFaceApp" startPc="268436498">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436608" name="getInitialView" parent="WatchFaceApp" startPc="268436577">
+        <functionEntry accessMode="public" endPc="268436532" name="getInitialView" parent="WatchFaceApp" startPc="268436501">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436623" name="initialize" parent="WatchFaceApp" startPc="268436609">
+        <functionEntry accessMode="public" endPc="268436547" name="initialize" parent="WatchFaceApp" startPc="268436533">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436626" name="onStop" parent="WatchFaceApp" startPc="268436624">
+        <functionEntry accessMode="public" endPc="268436550" name="onStop" parent="WatchFaceApp" startPc="268436548">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437256" name="WatchFace" parent="Layouts" startPc="268436627">
+        <functionEntry accessMode="public" endPc="268437180" name="WatchFace" parent="Layouts" startPc="268436551">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
