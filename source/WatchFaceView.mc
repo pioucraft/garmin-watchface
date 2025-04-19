@@ -47,9 +47,28 @@ class WatchFaceView extends WatchUi.WatchFace {
         var HeartRateView = View.findDrawableById("TestHeartRateLabel") as Text;
         HeartRateView.setText(getHeartRateString());
 
+        var StepsView = View.findDrawableById("StepsLabel") as Text;
+        var steps = Toybox.ActivityMonitor.getInfo().steps;
+        var stepsGoal = Toybox.ActivityMonitor.getInfo().stepGoal;
+        if (steps == null) {
+            steps = 0;
+        }
+        StepsView.setText(Lang.format("$1$ steps", [steps]));
+
+
+        var FloorsView = View.findDrawableById("FloorsLabel") as Text;
+        var floors = Toybox.ActivityMonitor.getInfo().floorsClimbed;
+        if (floors == null) {
+            floors = 0;
+        }
+        FloorsView.setText(Lang.format("$1$ floors", [floors]));
+
+
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+
+         
     }
 
     // Called when this View is removed from the screen. Save the
