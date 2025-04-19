@@ -12,101 +12,109 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Activity,7,14,22]; ]
 import Toybox.Activity;
-[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 10; @symbol_classdef = [WatchFaceView,10,6,19]; @symbol_extends<0> = [WatchUi,10,28,35]; @symbol_extends<1> = [WatchFace,10,36,45]; ]
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 9; @symbol_classdef = [WatchFaceView,9,6,19]; @symbol_extends<0> = [WatchUi,9,28,35]; @symbol_extends<1> = [WatchFace,9,36,45]; ]
 class WatchFaceView extends WatchUi.WatchFace {
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 10; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 9; ]
     <init> {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 10; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 9; ]
     static
     <init> {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 11; @position = 8; @symbol_vardef = [_lastStepsMinute,11,8,24]; ]
+    var _lastStepsMinute = null;
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 12; @position = 8; @symbol_vardef = [_cachedSteps,12,8,20]; ]
+    var _cachedSteps = 0;
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 13; @position = 8; @symbol_vardef = [_cachedStepsGoal,13,8,24]; ]
+    var _cachedStepsGoal = 0;
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 14; @position = 8; @symbol_vardef = [_cachedFillPercentage,14,8,29]; ]
+    var _cachedFillPercentage = 0.0;
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; ]
     function initialize() as Void {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_12_26_14_4_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 13 8 ]
-        symbol [ WatchFace %tmp.2 13 8 17 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_16_26_18_4_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 17 8 ]
+        symbol [ WatchFace %tmp.2 17 8 17 ];
         %tmp.2 = getv ? :WatchFace;
-        symbol [ initialize %tmp.3 13 18 28 ];
+        symbol [ initialize %tmp.3 17 18 28 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_12_26_14_4_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_16_26_18_4_stop:
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 17; @symbol_functiondef = [onLayout,17,13,21]; @symbol_param<0> = [dc,17,22,24]; @symbol_param<0>_type<0> = [Dc,17,28,30]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 21; @symbol_functiondef = [onLayout,21,13,21]; @symbol_param<0> = [dc,21,22,24]; @symbol_param<0>_type<0> = [Dc,21,28,30]; ]
     function onLayout(dc as Dc) as Void {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_17_40_19_4_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 18 8 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_21_40_23_4_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 22 8 ]
         %tmp.1 = self;
-        symbol [ setLayout %tmp.2 18 8 17 ];
+        symbol [ setLayout %tmp.2 22 8 17 ];
         %tmp.2 = getv function %tmp.1 :setLayout;
-        symbol [ Rez %tmp.4 18 18 21 ];
+        symbol [ Rez %tmp.4 22 18 21 ];
         %tmp.4 = getv ? :Rez;
-        symbol [ Layouts %tmp.5 18 22 29 ];
+        symbol [ Layouts %tmp.5 22 22 29 ];
         %tmp.5 = getv %tmp.4 :Layouts;
-        symbol [ WatchFace %tmp.6 18 30 39 ];
+        symbol [ WatchFace %tmp.6 22 30 39 ];
         %tmp.6 = getv function %tmp.5 :WatchFace;
         %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 18 40 42 ];
+        symbol [ dc %tmp.7 22 40 42 ];
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
         invoke %tmp.1 %tmp.2(%tmp.8);
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_17_40_19_4_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_21_40_23_4_stop:
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 24; @symbol_functiondef = [onShow,24,13,19]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 28; @symbol_functiondef = [onShow,28,13,19]; ]
     function onShow() as Void {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 28; @symbol_functiondef = [onUpdate,28,13,21]; @symbol_param<0> = [dc,28,22,24]; @symbol_param<0>_type<0> = [Dc,28,28,30]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 32; @symbol_functiondef = [onUpdate,32,13,21]; @symbol_param<0> = [dc,32,22,24]; @symbol_param<0>_type<0> = [Dc,32,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 30 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 34 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %clockTime.1 = local;
-        symbol [ clockTime %clockTime.1 30 12 21 ];
-        symbol [ System %tmp.1 30 24 30 ];
+        symbol [ clockTime %clockTime.1 34 12 21 ];
+        symbol [ System %tmp.1 34 24 30 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ getClockTime %tmp.2 30 31 43 ];
+        symbol [ getClockTime %tmp.2 34 31 43 ];
         %tmp.2 = getv function %tmp.1 :getClockTime;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %clockTime.1 %tmp.3;
-        symbol [ clockTime %clockTime.1 30 12 21 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 32 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+        symbol [ clockTime %clockTime.1 34 12 21 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 36 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %TimeView.2 = local;
-        symbol [ TimeView %TimeView.2 32 12 20 ];
-        symbol [ View %tmp.5 32 23 27 ];
+        symbol [ TimeView %TimeView.2 36 12 20 ];
+        symbol [ View %tmp.5 36 23 27 ];
         %tmp.5 = getv ? :View;
-        symbol [ findDrawableById %tmp.6 32 28 44 ];
+        symbol [ findDrawableById %tmp.6 36 28 44 ];
         %tmp.6 = getv function %tmp.5 :findDrawableById;
         %tmp.7 = "TimeLabel";
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
         %tmp.9 = as %tmp.8 Text;
-        symbol [ Text %tmp.9 32 61 65 ];
+        symbol [ Text %tmp.9 36 61 65 ];
         lputv %TimeView.2 %tmp.9;
-        symbol [ TimeView %TimeView.2 32 12 20 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 33 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+        symbol [ TimeView %TimeView.2 36 12 20 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 37 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %timeString.3 = local;
-        symbol [ timeString %timeString.3 33 12 22 ];
-        symbol [ Lang %tmp.10 33 25 29 ];
+        symbol [ timeString %timeString.3 37 12 22 ];
+        symbol [ Lang %tmp.10 37 25 29 ];
         %tmp.10 = getm $.Toybox.Lang;
-        symbol [ format %tmp.11 33 30 36 ];
+        symbol [ format %tmp.11 37 30 36 ];
         %tmp.11 = getv function %tmp.10 :format;
         %tmp.12 = "$1$:$2$";
         %tmp.13 = newa 2;
         %tmp.14 = lgetv %clockTime.1;
-        symbol [ clockTime %tmp.14 33 49 58 ];
-        symbol [ hour %tmp.15 33 59 63 ];
+        symbol [ clockTime %tmp.14 37 49 58 ];
+        symbol [ hour %tmp.15 37 59 63 ];
         %tmp.15 = getv %tmp.14 :hour;
-        symbol [ format %tmp.16 33 64 70 ];
+        symbol [ format %tmp.16 37 64 70 ];
         %tmp.16 = getv function %tmp.15 :format;
         %tmp.17 = "%02d";
         %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
         %tmp.19 = dup %tmp.13;
         %tmp.20 = aputv %tmp.19 0 %tmp.18;
         %tmp.21 = lgetv %clockTime.1;
-        symbol [ clockTime %tmp.21 33 80 89 ];
-        symbol [ min %tmp.22 33 90 93 ];
+        symbol [ clockTime %tmp.21 37 80 89 ];
+        symbol [ min %tmp.22 37 90 93 ];
         %tmp.22 = getv %tmp.21 :min;
-        symbol [ format %tmp.23 33 94 100 ];
+        symbol [ format %tmp.23 37 94 100 ];
         %tmp.23 = getv function %tmp.22 :format;
         %tmp.24 = "%02d";
         %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
@@ -114,30 +122,30 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40
         %tmp.27 = aputv %tmp.26 1 %tmp.25;
         %tmp.28 = invoke %tmp.10 %tmp.11(%tmp.12, %tmp.27);
         lputv %timeString.3 %tmp.28;
-        symbol [ timeString %timeString.3 33 12 22 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 34 8 ]
+        symbol [ timeString %timeString.3 37 12 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 38 8 ]
         %tmp.29 = lgetv %TimeView.2;
-        symbol [ TimeView %tmp.29 34 8 16 ];
-        symbol [ setText %tmp.30 34 17 24 ];
+        symbol [ TimeView %tmp.29 38 8 16 ];
+        symbol [ setText %tmp.30 38 17 24 ];
         %tmp.30 = getv function %tmp.29 :setText;
         %tmp.31 = lgetv %timeString.3;
-        symbol [ timeString %tmp.31 34 25 35 ];
+        symbol [ timeString %tmp.31 38 25 35 ];
         invoke %tmp.29 %tmp.30(%tmp.31);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 36 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 40 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %secondsString.4 = local;
-        symbol [ secondsString %secondsString.4 36 12 25 ];
-        symbol [ Lang %tmp.32 36 28 32 ];
+        symbol [ secondsString %secondsString.4 40 12 25 ];
+        symbol [ Lang %tmp.32 40 28 32 ];
         %tmp.32 = getm $.Toybox.Lang;
-        symbol [ format %tmp.33 36 33 39 ];
+        symbol [ format %tmp.33 40 33 39 ];
         %tmp.33 = getv function %tmp.32 :format;
         %tmp.34 = "$1$";
         %tmp.35 = newa 1;
         %tmp.36 = lgetv %clockTime.1;
-        symbol [ clockTime %tmp.36 36 48 57 ];
-        symbol [ sec %tmp.37 36 58 61 ];
+        symbol [ clockTime %tmp.36 40 48 57 ];
+        symbol [ sec %tmp.37 40 58 61 ];
         %tmp.37 = getv %tmp.36 :sec;
-        symbol [ format %tmp.38 36 62 68 ];
+        symbol [ format %tmp.38 40 62 68 ];
         %tmp.38 = getv function %tmp.37 :format;
         %tmp.39 = "%02d";
         %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
@@ -145,570 +153,889 @@ _Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40
         %tmp.42 = aputv %tmp.41 0 %tmp.40;
         %tmp.43 = invoke %tmp.32 %tmp.33(%tmp.34, %tmp.42);
         lputv %secondsString.4 %tmp.43;
-        symbol [ secondsString %secondsString.4 36 12 25 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 37 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+        symbol [ secondsString %secondsString.4 40 12 25 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 41 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %secondsView.5 = local;
-        symbol [ secondsView %secondsView.5 37 12 23 ];
-        symbol [ View %tmp.45 37 26 30 ];
+        symbol [ secondsView %secondsView.5 41 12 23 ];
+        symbol [ View %tmp.45 41 26 30 ];
         %tmp.45 = getv ? :View;
-        symbol [ findDrawableById %tmp.46 37 31 47 ];
+        symbol [ findDrawableById %tmp.46 41 31 47 ];
         %tmp.46 = getv function %tmp.45 :findDrawableById;
         %tmp.47 = "SecondsLabel";
         %tmp.48 = invoke %tmp.45 %tmp.46(%tmp.47);
         %tmp.49 = as %tmp.48 Text;
-        symbol [ Text %tmp.49 37 67 71 ];
+        symbol [ Text %tmp.49 41 67 71 ];
         lputv %secondsView.5 %tmp.49;
-        symbol [ secondsView %secondsView.5 37 12 23 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 38 8 ]
+        symbol [ secondsView %secondsView.5 41 12 23 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 42 8 ]
         %tmp.50 = lgetv %secondsView.5;
-        symbol [ secondsView %tmp.50 38 8 19 ];
-        symbol [ setText %tmp.51 38 20 27 ];
+        symbol [ secondsView %tmp.50 42 8 19 ];
+        symbol [ setText %tmp.51 42 20 27 ];
         %tmp.51 = getv function %tmp.50 :setText;
         %tmp.52 = lgetv %secondsString.4;
-        symbol [ secondsString %tmp.52 38 28 41 ];
+        symbol [ secondsString %tmp.52 42 28 41 ];
         invoke %tmp.50 %tmp.51(%tmp.52);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 40 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 44 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %dateView.6 = local;
-        symbol [ dateView %dateView.6 40 12 20 ];
-        symbol [ View %tmp.54 40 23 27 ];
+        symbol [ dateView %dateView.6 44 12 20 ];
+        symbol [ View %tmp.54 44 23 27 ];
         %tmp.54 = getv ? :View;
-        symbol [ findDrawableById %tmp.55 40 28 44 ];
+        symbol [ findDrawableById %tmp.55 44 28 44 ];
         %tmp.55 = getv function %tmp.54 :findDrawableById;
         %tmp.56 = "DateLabel";
         %tmp.57 = invoke %tmp.54 %tmp.55(%tmp.56);
         %tmp.58 = as %tmp.57 Text;
-        symbol [ Text %tmp.58 40 61 65 ];
+        symbol [ Text %tmp.58 44 61 65 ];
         lputv %dateView.6 %tmp.58;
-        symbol [ dateView %dateView.6 40 12 20 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 41 8 ]
+        symbol [ dateView %dateView.6 44 12 20 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 45 8 ]
         %tmp.59 = lgetv %dateView.6;
-        symbol [ dateView %tmp.59 41 8 16 ];
-        symbol [ setText %tmp.60 41 17 24 ];
+        symbol [ dateView %tmp.59 45 8 16 ];
+        symbol [ setText %tmp.60 45 17 24 ];
         %tmp.60 = getv function %tmp.59 :setText;
         %tmp.61 = self;
-        symbol [ getDate %tmp.62 41 25 32 ];
+        symbol [ getDate %tmp.62 45 25 32 ];
         %tmp.62 = getv function %tmp.61 :getDate;
         %tmp.63 = invoke %tmp.61 %tmp.62();
         invoke %tmp.59 %tmp.60(%tmp.63);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 43 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 47 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %HeartRateView.7 = local;
-        symbol [ HeartRateView %HeartRateView.7 43 12 25 ];
-        symbol [ View %tmp.65 43 28 32 ];
+        symbol [ HeartRateView %HeartRateView.7 47 12 25 ];
+        symbol [ View %tmp.65 47 28 32 ];
         %tmp.65 = getv ? :View;
-        symbol [ findDrawableById %tmp.66 43 33 49 ];
+        symbol [ findDrawableById %tmp.66 47 33 49 ];
         %tmp.66 = getv function %tmp.65 :findDrawableById;
         %tmp.67 = "TestHeartRateLabel";
         %tmp.68 = invoke %tmp.65 %tmp.66(%tmp.67);
         %tmp.69 = as %tmp.68 Text;
-        symbol [ Text %tmp.69 43 75 79 ];
+        symbol [ Text %tmp.69 47 75 79 ];
         lputv %HeartRateView.7 %tmp.69;
-        symbol [ HeartRateView %HeartRateView.7 43 12 25 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 44 8 ]
+        symbol [ HeartRateView %HeartRateView.7 47 12 25 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 48 8 ]
         %tmp.70 = lgetv %HeartRateView.7;
-        symbol [ HeartRateView %tmp.70 44 8 21 ];
-        symbol [ setText %tmp.71 44 22 29 ];
+        symbol [ HeartRateView %tmp.70 48 8 21 ];
+        symbol [ setText %tmp.71 48 22 29 ];
         %tmp.71 = getv function %tmp.70 :setText;
         %tmp.72 = self;
-        symbol [ getHeartRateString %tmp.73 44 30 48 ];
+        symbol [ getHeartRateString %tmp.73 48 30 48 ];
         %tmp.73 = getv function %tmp.72 :getHeartRateString;
         %tmp.74 = invoke %tmp.72 %tmp.73();
         invoke %tmp.70 %tmp.71(%tmp.74);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 46 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 50 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %StepsView.8 = local;
-        symbol [ StepsView %StepsView.8 46 12 21 ];
-        symbol [ View %tmp.76 46 24 28 ];
+        symbol [ StepsView %StepsView.8 50 12 21 ];
+        symbol [ View %tmp.76 50 24 28 ];
         %tmp.76 = getv ? :View;
-        symbol [ findDrawableById %tmp.77 46 29 45 ];
+        symbol [ findDrawableById %tmp.77 50 29 45 ];
         %tmp.77 = getv function %tmp.76 :findDrawableById;
         %tmp.78 = "StepsLabel";
         %tmp.79 = invoke %tmp.76 %tmp.77(%tmp.78);
         %tmp.80 = as %tmp.79 Text;
-        symbol [ Text %tmp.80 46 63 67 ];
+        symbol [ Text %tmp.80 50 63 67 ];
         lputv %StepsView.8 %tmp.80;
-        symbol [ StepsView %StepsView.8 46 12 21 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 47 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %steps.9 = local;
-        symbol [ steps %steps.9 47 12 17 ];
-        symbol [ Toybox %tmp.82 47 20 26 ];
-        %tmp.82 = getv ? :Toybox;
-        symbol [ ActivityMonitor %tmp.83 47 27 42 ];
-        %tmp.83 = getv %tmp.82 :ActivityMonitor;
-        symbol [ getInfo %tmp.84 47 43 50 ];
-        %tmp.84 = getv function %tmp.83 :getInfo;
-        %tmp.85 = invoke %tmp.83 %tmp.84();
-        symbol [ steps %tmp.86 47 53 58 ];
-        %tmp.86 = getv %tmp.85 :steps;
-        lputv %steps.9 %tmp.86;
-        symbol [ steps %steps.9 47 12 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 49 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %stepsGoal.10 = local;
-        symbol [ stepsGoal %stepsGoal.10 49 12 21 ];
-        symbol [ Toybox %tmp.88 49 24 30 ];
-        %tmp.88 = getv ? :Toybox;
-        symbol [ ActivityMonitor %tmp.89 49 31 46 ];
-        %tmp.89 = getv %tmp.88 :ActivityMonitor;
-        symbol [ getInfo %tmp.90 49 47 54 ];
-        %tmp.90 = getv function %tmp.89 :getInfo;
-        %tmp.91 = invoke %tmp.89 %tmp.90();
-        symbol [ stepGoal %tmp.92 49 57 65 ];
-        %tmp.92 = getv %tmp.91 :stepGoal;
-        lputv %stepsGoal.10 %tmp.92;
-        symbol [ stepsGoal %stepsGoal.10 49 12 21 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 51 8 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_8_53_8_if_stmt:
-        %tmp.93 = lgetv %steps.9;
-        symbol [ steps %tmp.93 51 12 17 ];
-        %tmp.94 = null;
-        %tmp.95 = eq %tmp.93 %tmp.94;
-        bf %tmp.95 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_8_53_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_8_53_8_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_27_53_8_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 52 12 ]
-        %tmp.96 = 0;
-        lputv %steps.9 %tmp.96;
-        symbol [ steps %steps.9 52 12 17 ];
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_27_53_8_stop:
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_8_53_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_51_8_53_8_if_end:
+        symbol [ StepsView %StepsView.8 50 12 21 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 53 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %currentMinute.9 = local;
+        symbol [ currentMinute %currentMinute.9 53 12 25 ];
+        %tmp.81 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.81 53 28 37 ];
+        symbol [ min %tmp.82 53 38 41 ];
+        %tmp.82 = getv %tmp.81 :min;
+        lputv %currentMinute.9 %tmp.82;
+        symbol [ currentMinute %currentMinute.9 53 12 25 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 54 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %fillPercentage.11 = local;
-        symbol [ fillPercentage %fillPercentage.11 54 12 26 ];
-        %tmp.97 = lgetv %steps.9;
-        symbol [ steps %tmp.97 54 30 35 ];
-        symbol [ toFloat %tmp.98 54 36 43 ];
-        %tmp.98 = getv function %tmp.97 :toFloat;
-        %tmp.99 = invoke %tmp.97 %tmp.98();
-        %tmp.100 = lgetv %stepsGoal.10;
-        symbol [ stepsGoal %tmp.100 54 48 57 ];
-        symbol [ toFloat %tmp.101 54 58 65 ];
-        %tmp.101 = getv function %tmp.100 :toFloat;
-        %tmp.102 = invoke %tmp.100 %tmp.101();
-        %tmp.103 = div %tmp.99 %tmp.102;
-        lputv %fillPercentage.11 %tmp.103;
-        symbol [ fillPercentage %fillPercentage.11 54 12 26 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 56 8 ]
-        %tmp.104 = lgetv %StepsView.8;
-        symbol [ StepsView %tmp.104 56 8 17 ];
-        symbol [ setText %tmp.105 56 18 25 ];
-        %tmp.105 = getv function %tmp.104 :setText;
-        symbol [ Lang %tmp.106 56 26 30 ];
-        %tmp.106 = getm $.Toybox.Lang;
-        symbol [ format %tmp.107 56 31 37 ];
-        %tmp.107 = getv function %tmp.106 :format;
-        %tmp.108 = "$1$ steps";
-        %tmp.109 = newa 1;
-        %tmp.110 = lgetv %steps.9;
-        symbol [ steps %tmp.110 56 52 57 ];
-        %tmp.111 = dup %tmp.109;
-        %tmp.112 = aputv %tmp.111 0 %tmp.110;
-        %tmp.113 = invoke %tmp.106 %tmp.107(%tmp.108, %tmp.112);
-        invoke %tmp.104 %tmp.105(%tmp.113);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 67 8 ]
-        symbol [ View %tmp.115 67 8 12 ];
-        %tmp.115 = getv ? :View;
-        symbol [ onUpdate %tmp.116 67 13 21 ];
-        %tmp.116 = getv function %tmp.115 :onUpdate;
-        %tmp.117 = lgetv %dc;
-        symbol [ dc %tmp.117 67 22 24 ];
-        invoke %tmp.115 %tmp.116(%tmp.117);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_stmt:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_12_54_60_begin:
+        symbol [ _lastStepsMinute %tmp.84 54 12 28 ];
+        %tmp.84 = getv ? :_lastStepsMinute;
+        %tmp.85 = null;
+        %tmp.86 = eq %tmp.84 %tmp.85;
+        bt %tmp.86 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_true;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_40_54_60_false:
+        symbol [ _lastStepsMinute %tmp.88 54 40 56 ];
+        %tmp.88 = getv ? :_lastStepsMinute;
+        %tmp.89 = as %tmp.88 { (!Null) };
+        %tmp.90 = lgetv %currentMinute.9;
+        symbol [ currentMinute %tmp.90 54 60 73 ];
+        %tmp.91 = ne %tmp.89 %tmp.90;
+        push %tmp.91;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_40_54_60_end:
+        %tmp.92 = phi [%tmp.86 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_12_54_60_begin] [%tmp.91 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_40_54_60_false] [%tmp.92 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_40_54_60_end];
+        bf %tmp.92 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_75_60_8_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 55 12 ]
+        %tmp.93 = lgetv %currentMinute.9;
+        symbol [ currentMinute %tmp.93 55 31 44 ];
+        symbol [ _lastStepsMinute ? 55 12 28 ];
+        putv self :_lastStepsMinute %tmp.93;
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 56 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_75_60_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_75_60_8_stop" ]
+        %info.10 = local;
+        symbol [ info %info.10 56 16 20 ];
+        symbol [ Toybox %tmp.95 56 23 29 ];
+        %tmp.95 = getv ? :Toybox;
+        symbol [ ActivityMonitor %tmp.96 56 30 45 ];
+        %tmp.96 = getv %tmp.95 :ActivityMonitor;
+        symbol [ getInfo %tmp.97 56 46 53 ];
+        %tmp.97 = getv function %tmp.96 :getInfo;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        lputv %info.10 %tmp.98;
+        symbol [ info %info.10 56 16 20 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 57 12 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_begin:
+        %tmp.99 = lgetv %info.10;
+        symbol [ info %tmp.99 57 27 31 ];
+        symbol [ steps %tmp.100 57 32 37 ];
+        %tmp.100 = getv %tmp.99 :steps;
+        %tmp.101 = null;
+        %tmp.102 = ne %tmp.100 %tmp.101;
+        bf %tmp.102 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_false;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_true:
+        %tmp.103 = lgetv %info.10;
+        symbol [ info %tmp.103 57 48 52 ];
+        symbol [ steps %tmp.104 57 53 58 ];
+        %tmp.104 = getv %tmp.103 :steps;
+        push %tmp.104;
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_false:
+        %tmp.105 = 0;
+        push %tmp.105;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_end:
+        %tmp.106 = phi [%tmp.102 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_begin] [%tmp.104 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_true] [%tmp.105 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_false] [%tmp.106 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_57_27_57_61_end];
+        symbol [ _cachedSteps ? 57 12 24 ];
+        putv self :_cachedSteps %tmp.106;
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 58 12 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_begin:
+        %tmp.107 = lgetv %info.10;
+        symbol [ info %tmp.107 58 31 35 ];
+        symbol [ stepGoal %tmp.108 58 36 44 ];
+        %tmp.108 = getv %tmp.107 :stepGoal;
+        %tmp.109 = null;
+        %tmp.110 = ne %tmp.108 %tmp.109;
+        bf %tmp.110 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_false;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_true:
+        %tmp.111 = lgetv %info.10;
+        symbol [ info %tmp.111 58 55 59 ];
+        symbol [ stepGoal %tmp.112 58 60 68 ];
+        %tmp.112 = getv %tmp.111 :stepGoal;
+        push %tmp.112;
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_false:
+        %tmp.113 = 1;
+        push %tmp.113;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_end:
+        %tmp.114 = phi [%tmp.110 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_begin] [%tmp.112 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_true] [%tmp.113 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_false] [%tmp.114 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_58_31_58_71_end];
+        symbol [ _cachedStepsGoal ? 58 12 28 ];
+        putv self :_cachedStepsGoal %tmp.114;
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 59 12 ]
+        symbol [ _cachedSteps %tmp.116 59 37 49 ];
+        %tmp.116 = getv ? :_cachedSteps;
+        symbol [ toFloat %tmp.117 59 50 57 ];
+        %tmp.117 = getv function %tmp.116 :toFloat;
+        %tmp.118 = invoke %tmp.116 %tmp.117();
+        symbol [ _cachedStepsGoal %tmp.120 59 62 78 ];
+        %tmp.120 = getv ? :_cachedStepsGoal;
+        symbol [ toFloat %tmp.121 59 79 86 ];
+        %tmp.121 = getv function %tmp.120 :toFloat;
+        %tmp.122 = invoke %tmp.120 %tmp.121();
+        %tmp.123 = div %tmp.118 %tmp.122;
+        symbol [ _cachedFillPercentage ? 59 12 33 ];
+        putv self :_cachedFillPercentage %tmp.123;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_75_60_8_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_54_8_60_8_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 61 8 ]
+        %tmp.124 = lgetv %StepsView.8;
+        symbol [ StepsView %tmp.124 61 8 17 ];
+        symbol [ setText %tmp.125 61 18 25 ];
+        %tmp.125 = getv function %tmp.124 :setText;
+        symbol [ Lang %tmp.126 61 26 30 ];
+        %tmp.126 = getm $.Toybox.Lang;
+        symbol [ format %tmp.127 61 31 37 ];
+        %tmp.127 = getv function %tmp.126 :format;
+        %tmp.128 = "$1$ steps";
+        %tmp.129 = newa 1;
+        symbol [ _cachedSteps %tmp.131 61 52 64 ];
+        %tmp.131 = getv ? :_cachedSteps;
+        %tmp.132 = dup %tmp.129;
+        %tmp.133 = aputv %tmp.132 0 %tmp.131;
+        %tmp.134 = invoke %tmp.126 %tmp.127(%tmp.128, %tmp.133);
+        invoke %tmp.124 %tmp.125(%tmp.134);
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 68 8 ]
+        symbol [ View %tmp.136 68 8 12 ];
+        %tmp.136 = getv ? :View;
+        symbol [ onUpdate %tmp.137 68 13 21 ];
+        %tmp.137 = getv function %tmp.136 :onUpdate;
+        %tmp.138 = lgetv %dc;
+        symbol [ dc %tmp.138 68 22 24 ];
+        invoke %tmp.136 %tmp.137(%tmp.138);
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 71 8 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_stmt:
-        %tmp.118 = lgetv %fillPercentage.11;
-        symbol [ fillPercentage %tmp.118 71 12 26 ];
-        %tmp.119 = 0;
-        %tmp.120 = lt %tmp.118 %tmp.119;
-        bf %tmp.120 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_false;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_32_73_8_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 72 12 ]
-        %tmp.121 = 0;
-        lputv %fillPercentage.11 %tmp.121;
-        symbol [ fillPercentage %fillPercentage.11 72 12 26 ];
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_32_73_8_stop:
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_false:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 73 15 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_15_75_8_if_stmt:
-        %tmp.122 = lgetv %fillPercentage.11;
-        symbol [ fillPercentage %tmp.122 73 19 33 ];
-        %tmp.123 = 1;
-        %tmp.124 = gt %tmp.122 %tmp.123;
-        bf %tmp.124 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_15_75_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_15_75_8_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_39_75_8_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 74 12 ]
-        %tmp.125 = 1;
-        lputv %fillPercentage.11 %tmp.125;
-        symbol [ fillPercentage %fillPercentage.11 74 12 26 ];
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_39_75_8_stop:
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_15_75_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_73_15_75_8_if_end:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_71_8_75_8_if_end:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 78 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %rectWidth.12 = local;
-        symbol [ rectWidth %rectWidth.12 78 12 21 ];
-        %tmp.126 = lgetv %dc;
-        symbol [ dc %tmp.126 78 24 26 ];
-        symbol [ getWidth %tmp.127 78 27 35 ];
-        %tmp.127 = getv function %tmp.126 :getWidth;
-        %tmp.128 = invoke %tmp.126 %tmp.127();
-        %tmp.129 = 0.6;
-        %tmp.130 = mul %tmp.128 %tmp.129;
-        lputv %rectWidth.12 %tmp.130;
-        symbol [ rectWidth %rectWidth.12 78 12 21 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 79 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %rectHeight.13 = local;
-        symbol [ rectHeight %rectHeight.13 79 12 22 ];
-        %tmp.131 = 25;
-        lputv %rectHeight.13 %tmp.131;
-        symbol [ rectHeight %rectHeight.13 79 12 22 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 80 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %rectX.14 = local;
-        symbol [ rectX %rectX.14 80 12 17 ];
-        %tmp.132 = lgetv %dc;
-        symbol [ dc %tmp.132 80 21 23 ];
-        symbol [ getWidth %tmp.133 80 24 32 ];
-        %tmp.133 = getv function %tmp.132 :getWidth;
-        %tmp.134 = invoke %tmp.132 %tmp.133();
-        %tmp.135 = lgetv %rectWidth.12;
-        symbol [ rectWidth %tmp.135 80 37 46 ];
-        %tmp.136 = sub %tmp.134 %tmp.135;
-        %tmp.137 = 2;
-        %tmp.138 = div %tmp.136 %tmp.137;
-        lputv %rectX.14 %tmp.138;
-        symbol [ rectX %rectX.14 80 12 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 82 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %rectY.15 = local;
-        symbol [ rectY %rectY.15 82 12 17 ];
-        %tmp.139 = 270;
-        lputv %rectY.15 %tmp.139;
-        symbol [ rectY %rectY.15 82 12 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 83 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %cornerRadius.16 = local;
-        symbol [ cornerRadius %cornerRadius.16 83 12 24 ];
-        %tmp.140 = 4;
-        lputv %cornerRadius.16 %tmp.140;
-        symbol [ cornerRadius %cornerRadius.16 83 12 24 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 88 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %filledRatio.17 = local;
-        symbol [ filledRatio %filledRatio.17 88 12 23 ];
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %fillPercentage.11 = local;
+        symbol [ fillPercentage %fillPercentage.11 71 12 26 ];
+        symbol [ _cachedFillPercentage %tmp.140 71 29 50 ];
+        %tmp.140 = getv ? :_cachedFillPercentage;
+        lputv %fillPercentage.11 %tmp.140;
+        symbol [ fillPercentage %fillPercentage.11 71 12 26 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 72 8 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_stmt:
         %tmp.141 = lgetv %fillPercentage.11;
-        symbol [ fillPercentage %tmp.141 88 26 40 ];
-        lputv %filledRatio.17 %tmp.141;
-        symbol [ filledRatio %filledRatio.17 88 12 23 ];
+        symbol [ fillPercentage %tmp.141 72 12 26 ];
+        %tmp.142 = 0;
+        %tmp.143 = lt %tmp.141 %tmp.142;
+        bf %tmp.143 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_false;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_32_74_8_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 73 12 ]
+        %tmp.144 = 0;
+        lputv %fillPercentage.11 %tmp.144;
+        symbol [ fillPercentage %fillPercentage.11 73 12 26 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_32_74_8_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_false:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 74 15 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_15_76_8_if_stmt:
+        %tmp.145 = lgetv %fillPercentage.11;
+        symbol [ fillPercentage %tmp.145 74 19 33 ];
+        %tmp.146 = 1;
+        %tmp.147 = gt %tmp.145 %tmp.146;
+        bf %tmp.147 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_15_76_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_15_76_8_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_39_76_8_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 75 12 ]
+        %tmp.148 = 1;
+        lputv %fillPercentage.11 %tmp.148;
+        symbol [ fillPercentage %fillPercentage.11 75 12 26 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_39_76_8_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_15_76_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_74_15_76_8_if_end:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_72_8_76_8_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 79 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %rectWidth.12 = local;
+        symbol [ rectWidth %rectWidth.12 79 12 21 ];
+        %tmp.149 = lgetv %dc;
+        symbol [ dc %tmp.149 79 24 26 ];
+        symbol [ getWidth %tmp.150 79 27 35 ];
+        %tmp.150 = getv function %tmp.149 :getWidth;
+        %tmp.151 = invoke %tmp.149 %tmp.150();
+        %tmp.152 = 0.6;
+        %tmp.153 = mul %tmp.151 %tmp.152;
+        lputv %rectWidth.12 %tmp.153;
+        symbol [ rectWidth %rectWidth.12 79 12 21 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 80 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %rectHeight.13 = local;
+        symbol [ rectHeight %rectHeight.13 80 12 22 ];
+        %tmp.154 = 25;
+        lputv %rectHeight.13 %tmp.154;
+        symbol [ rectHeight %rectHeight.13 80 12 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 81 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %rectX.14 = local;
+        symbol [ rectX %rectX.14 81 12 17 ];
+        %tmp.155 = lgetv %dc;
+        symbol [ dc %tmp.155 81 21 23 ];
+        symbol [ getWidth %tmp.156 81 24 32 ];
+        %tmp.156 = getv function %tmp.155 :getWidth;
+        %tmp.157 = invoke %tmp.155 %tmp.156();
+        %tmp.158 = lgetv %rectWidth.12;
+        symbol [ rectWidth %tmp.158 81 37 46 ];
+        %tmp.159 = sub %tmp.157 %tmp.158;
+        %tmp.160 = 2;
+        %tmp.161 = div %tmp.159 %tmp.160;
+        lputv %rectX.14 %tmp.161;
+        symbol [ rectX %rectX.14 81 12 17 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 83 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %rectY.15 = local;
+        symbol [ rectY %rectY.15 83 12 17 ];
+        %tmp.162 = 270;
+        lputv %rectY.15 %tmp.162;
+        symbol [ rectY %rectY.15 83 12 17 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 84 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %cornerRadius.16 = local;
+        symbol [ cornerRadius %cornerRadius.16 84 12 24 ];
+        %tmp.163 = 4;
+        lputv %cornerRadius.16 %tmp.163;
+        symbol [ cornerRadius %cornerRadius.16 84 12 24 ];
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 89 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %filledRatio.17 = local;
+        symbol [ filledRatio %filledRatio.17 89 12 23 ];
+        %tmp.164 = lgetv %fillPercentage.11;
+        symbol [ fillPercentage %tmp.164 89 26 40 ];
+        lputv %filledRatio.17 %tmp.164;
+        symbol [ filledRatio %filledRatio.17 89 12 23 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 90 8 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
         %filledWidth.18 = local;
-        symbol [ filledWidth %filledWidth.18 89 12 23 ];
-        %tmp.142 = lgetv %rectWidth.12;
-        symbol [ rectWidth %tmp.142 89 27 36 ];
-        %tmp.143 = lgetv %filledRatio.17;
-        symbol [ filledRatio %tmp.143 89 39 50 ];
-        %tmp.144 = mul %tmp.142 %tmp.143;
-        symbol [ toNumber %tmp.145 89 52 60 ];
-        %tmp.145 = getv function %tmp.144 :toNumber;
-        %tmp.146 = invoke %tmp.144 %tmp.145();
-        lputv %filledWidth.18 %tmp.146;
-        symbol [ filledWidth %filledWidth.18 89 12 23 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 92 8 ]
-        %tmp.147 = lgetv %dc;
-        symbol [ dc %tmp.147 92 8 10 ];
-        symbol [ setColor %tmp.148 92 11 19 ];
-        %tmp.148 = getv function %tmp.147 :setColor;
-        symbol [ Graphics %tmp.149 92 20 28 ];
-        %tmp.149 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.150 92 29 40 ];
-        %tmp.150 = getv %tmp.149 :COLOR_WHITE;
-        symbol [ Graphics %tmp.151 92 42 50 ];
-        %tmp.151 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.152 92 51 68 ];
-        %tmp.152 = getv %tmp.151 :COLOR_TRANSPARENT;
-        invoke %tmp.147 %tmp.148(%tmp.150, %tmp.152);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 94 8 ]
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop" ]
-        %borderThickness.19 = local;
-        symbol [ borderThickness %borderThickness.19 94 12 27 ];
-        %tmp.153 = 3;
-        lputv %borderThickness.19 %tmp.153;
-        symbol [ borderThickness %borderThickness.19 94 12 27 ];
+        symbol [ filledWidth %filledWidth.18 90 12 23 ];
+        %tmp.165 = lgetv %rectWidth.12;
+        symbol [ rectWidth %tmp.165 90 27 36 ];
+        %tmp.166 = lgetv %filledRatio.17;
+        symbol [ filledRatio %tmp.166 90 39 50 ];
+        %tmp.167 = mul %tmp.165 %tmp.166;
+        symbol [ toNumber %tmp.168 90 52 60 ];
+        %tmp.168 = getv function %tmp.167 :toNumber;
+        %tmp.169 = invoke %tmp.167 %tmp.168();
+        lputv %filledWidth.18 %tmp.169;
+        symbol [ filledWidth %filledWidth.18 90 12 23 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 93 8 ]
+        %tmp.170 = lgetv %dc;
+        symbol [ dc %tmp.170 93 8 10 ];
+        symbol [ setColor %tmp.171 93 11 19 ];
+        %tmp.171 = getv function %tmp.170 :setColor;
+        symbol [ Graphics %tmp.172 93 20 28 ];
+        %tmp.172 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.173 93 29 40 ];
+        %tmp.173 = getv %tmp.172 :COLOR_WHITE;
+        symbol [ Graphics %tmp.174 93 42 50 ];
+        %tmp.174 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.175 93 51 68 ];
+        %tmp.175 = getv %tmp.174 :COLOR_TRANSPARENT;
+        invoke %tmp.170 %tmp.171(%tmp.173, %tmp.175);
 [ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 95 8 ]
-        for @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_test @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_incr @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_init:
-        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_begin" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_end" ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop" ]
+        %borderThickness.19 = local;
+        symbol [ borderThickness %borderThickness.19 95 12 27 ];
+        %tmp.176 = 3;
+        lputv %borderThickness.19 %tmp.176;
+        symbol [ borderThickness %borderThickness.19 95 12 27 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 96 8 ]
+        for @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_test @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_incr @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_init:
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_begin" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_end" ]
         %i.20 = local;
-        symbol [ i %i.20 95 17 18 ];
-        %tmp.154 = 0;
-        lputv %i.20 %tmp.154;
-        symbol [ i %i.20 95 17 18 ];
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_test:
-        %tmp.155 = lgetv %i.20;
-        symbol [ i %tmp.155 95 24 25 ];
-        %tmp.156 = lgetv %borderThickness.19;
-        symbol [ borderThickness %tmp.156 95 28 43 ];
-        %tmp.157 = lt %tmp.155 %tmp.156;
-        bf %tmp.157 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_begin:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_53_103_8_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 96 12 ]
-        %tmp.158 = lgetv %dc;
-        symbol [ dc %tmp.158 96 12 14 ];
-        symbol [ drawRoundedRectangle %tmp.159 96 15 35 ];
-        %tmp.159 = getv function %tmp.158 :drawRoundedRectangle;
-        %tmp.160 = lgetv %rectX.14;
-        symbol [ rectX %tmp.160 97 16 21 ];
-        %tmp.161 = lgetv %i.20;
-        symbol [ i %tmp.161 97 24 25 ];
-        %tmp.162 = 0.5;
-        %tmp.163 = mul %tmp.161 %tmp.162;
-        %tmp.164 = sub %tmp.160 %tmp.163;
-        %tmp.165 = lgetv %rectY.15;
-        symbol [ rectY %tmp.165 98 16 21 ];
-        %tmp.166 = lgetv %i.20;
-        symbol [ i %tmp.166 98 24 25 ];
-        %tmp.167 = 0.5;
-        %tmp.168 = mul %tmp.166 %tmp.167;
-        %tmp.169 = sub %tmp.165 %tmp.168;
-        %tmp.170 = lgetv %rectWidth.12;
-        symbol [ rectWidth %tmp.170 99 16 25 ];
-        %tmp.171 = lgetv %i.20;
-        symbol [ i %tmp.171 99 28 29 ];
-        %tmp.172 = add %tmp.170 %tmp.171;
-        %tmp.173 = lgetv %rectHeight.13;
-        symbol [ rectHeight %tmp.173 100 16 26 ];
-        %tmp.174 = lgetv %i.20;
-        symbol [ i %tmp.174 100 29 30 ];
-        %tmp.175 = add %tmp.173 %tmp.174;
-        %tmp.176 = lgetv %cornerRadius.16;
-        symbol [ cornerRadius %tmp.176 101 16 28 ];
-        %tmp.177 = lgetv %i.20;
-        symbol [ i %tmp.177 101 31 32 ];
-        %tmp.178 = 0.5;
-        %tmp.179 = mul %tmp.177 %tmp.178;
-        %tmp.180 = add %tmp.176 %tmp.179;
-        invoke %tmp.158 %tmp.159(%tmp.164, %tmp.169, %tmp.172, %tmp.175, %tmp.180);
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_53_103_8_stop:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_incr:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 95 ]
-        %tmp.181 = lgetv %i.20;
-        symbol [ i %tmp.181 95 45 46 ];
-        %tmp.182 = 1;
-        %tmp.183 = add %tmp.181 %tmp.182;
-        lputv %i.20 %tmp.183;
-        symbol [ i %i.20 95 45 46 ];
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_test;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_95_8_103_8_for_end:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 111 8 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_8_121_8_if_stmt:
-        %tmp.184 = lgetv %filledWidth.18;
-        symbol [ filledWidth %tmp.184 111 12 23 ];
-        %tmp.185 = 0;
-        %tmp.186 = gt %tmp.184 %tmp.185;
-        bf %tmp.186 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_8_121_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_8_121_8_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_29_121_8_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 112 12 ]
-        %tmp.187 = lgetv %dc;
-        symbol [ dc %tmp.187 112 12 14 ];
-        symbol [ setColor %tmp.188 112 15 23 ];
-        %tmp.188 = getv function %tmp.187 :setColor;
-        symbol [ Graphics %tmp.189 112 24 32 ];
-        %tmp.189 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.190 112 33 44 ];
-        %tmp.190 = getv %tmp.189 :COLOR_WHITE;
-        symbol [ Graphics %tmp.191 112 46 54 ];
-        %tmp.191 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.192 112 55 72 ];
-        %tmp.192 = getv %tmp.191 :COLOR_TRANSPARENT;
-        invoke %tmp.187 %tmp.188(%tmp.190, %tmp.192);
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 116 13 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_stmt:
-        %tmp.193 = lgetv %filledWidth.18;
-        symbol [ filledWidth %tmp.193 116 17 28 ];
-        %tmp.194 = lgetv %rectWidth.12;
-        symbol [ rectWidth %tmp.194 116 32 41 ];
-        %tmp.195 = lgetv %cornerRadius.16;
-        symbol [ cornerRadius %tmp.195 116 44 56 ];
-        %tmp.196 = sub %tmp.194 %tmp.195;
-        %tmp.197 = gte %tmp.193 %tmp.196;
-        bf %tmp.197 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_else_false;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_58_118_13_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 117 13 ]
-        %tmp.198 = lgetv %dc;
-        symbol [ dc %tmp.198 117 13 15 ];
-        symbol [ fillRoundedRectangle %tmp.199 117 16 36 ];
-        %tmp.199 = getv function %tmp.198 :fillRoundedRectangle;
-        %tmp.200 = lgetv %rectX.14;
-        symbol [ rectX %tmp.200 117 37 42 ];
-        %tmp.201 = lgetv %rectY.15;
-        symbol [ rectY %tmp.201 117 44 49 ];
-        %tmp.202 = lgetv %filledWidth.18;
-        symbol [ filledWidth %tmp.202 117 51 62 ];
-        %tmp.203 = lgetv %rectHeight.13;
-        symbol [ rectHeight %tmp.203 117 64 74 ];
-        %tmp.204 = lgetv %cornerRadius.16;
-        symbol [ cornerRadius %tmp.204 117 76 88 ];
-        invoke %tmp.198 %tmp.199(%tmp.200, %tmp.201, %tmp.202, %tmp.203, %tmp.204);
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_58_118_13_stop:
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_else_false:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_118_20_120_13_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 119 13 ]
-        %tmp.205 = lgetv %dc;
-        symbol [ dc %tmp.205 119 13 15 ];
-        symbol [ fillRectangle %tmp.206 119 16 29 ];
-        %tmp.206 = getv function %tmp.205 :fillRectangle;
-        %tmp.207 = lgetv %rectX.14;
-        symbol [ rectX %tmp.207 119 30 35 ];
-        %tmp.208 = lgetv %rectY.15;
-        symbol [ rectY %tmp.208 119 37 42 ];
-        %tmp.209 = lgetv %filledWidth.18;
-        symbol [ filledWidth %tmp.209 119 44 55 ];
-        %tmp.210 = lgetv %rectHeight.13;
-        symbol [ rectHeight %tmp.210 119 57 67 ];
-        invoke %tmp.205 %tmp.206(%tmp.207, %tmp.208, %tmp.209, %tmp.210);
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_118_20_120_13_stop:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_116_13_120_13_if_end:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_29_121_8_stop:
-        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_8_121_8_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_111_8_121_8_if_end:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_28_40_124_4_stop:
+        symbol [ i %i.20 96 17 18 ];
+        %tmp.177 = 0;
+        lputv %i.20 %tmp.177;
+        symbol [ i %i.20 96 17 18 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_test:
+        %tmp.178 = lgetv %i.20;
+        symbol [ i %tmp.178 96 24 25 ];
+        %tmp.179 = lgetv %borderThickness.19;
+        symbol [ borderThickness %tmp.179 96 28 43 ];
+        %tmp.180 = lt %tmp.178 %tmp.179;
+        bf %tmp.180 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_begin:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_53_104_8_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 97 12 ]
+        %tmp.181 = lgetv %dc;
+        symbol [ dc %tmp.181 97 12 14 ];
+        symbol [ drawRoundedRectangle %tmp.182 97 15 35 ];
+        %tmp.182 = getv function %tmp.181 :drawRoundedRectangle;
+        %tmp.183 = lgetv %rectX.14;
+        symbol [ rectX %tmp.183 98 16 21 ];
+        %tmp.184 = lgetv %i.20;
+        symbol [ i %tmp.184 98 24 25 ];
+        %tmp.185 = 0.5;
+        %tmp.186 = mul %tmp.184 %tmp.185;
+        %tmp.187 = sub %tmp.183 %tmp.186;
+        %tmp.188 = lgetv %rectY.15;
+        symbol [ rectY %tmp.188 99 16 21 ];
+        %tmp.189 = lgetv %i.20;
+        symbol [ i %tmp.189 99 24 25 ];
+        %tmp.190 = 0.5;
+        %tmp.191 = mul %tmp.189 %tmp.190;
+        %tmp.192 = sub %tmp.188 %tmp.191;
+        %tmp.193 = lgetv %rectWidth.12;
+        symbol [ rectWidth %tmp.193 100 16 25 ];
+        %tmp.194 = lgetv %i.20;
+        symbol [ i %tmp.194 100 28 29 ];
+        %tmp.195 = add %tmp.193 %tmp.194;
+        %tmp.196 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.196 101 16 26 ];
+        %tmp.197 = lgetv %i.20;
+        symbol [ i %tmp.197 101 29 30 ];
+        %tmp.198 = add %tmp.196 %tmp.197;
+        %tmp.199 = lgetv %cornerRadius.16;
+        symbol [ cornerRadius %tmp.199 102 16 28 ];
+        %tmp.200 = lgetv %i.20;
+        symbol [ i %tmp.200 102 31 32 ];
+        %tmp.201 = 0.5;
+        %tmp.202 = mul %tmp.200 %tmp.201;
+        %tmp.203 = add %tmp.199 %tmp.202;
+        invoke %tmp.181 %tmp.182(%tmp.187, %tmp.192, %tmp.195, %tmp.198, %tmp.203);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_53_104_8_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_incr:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 96 ]
+        %tmp.204 = lgetv %i.20;
+        symbol [ i %tmp.204 96 45 46 ];
+        %tmp.205 = 1;
+        %tmp.206 = add %tmp.204 %tmp.205;
+        lputv %i.20 %tmp.206;
+        symbol [ i %i.20 96 45 46 ];
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_test;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_96_8_104_8_for_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 107 8 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_8_149_8_if_stmt:
+        %tmp.207 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.207 107 12 23 ];
+        %tmp.208 = 0;
+        %tmp.209 = gt %tmp.207 %tmp.208;
+        bf %tmp.209 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_8_149_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_8_149_8_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 109 12 ]
+        %tmp.210 = lgetv %dc;
+        symbol [ dc %tmp.210 109 12 14 ];
+        symbol [ setColor %tmp.211 109 15 23 ];
+        %tmp.211 = getv function %tmp.210 :setColor;
+        symbol [ Graphics %tmp.212 109 24 32 ];
+        %tmp.212 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.213 109 33 44 ];
+        %tmp.213 = getv %tmp.212 :COLOR_WHITE;
+        symbol [ Graphics %tmp.214 109 46 54 ];
+        %tmp.214 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.215 109 55 72 ];
+        %tmp.215 = getv %tmp.214 :COLOR_TRANSPARENT;
+        invoke %tmp.210 %tmp.211(%tmp.213, %tmp.215);
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 110 12 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_stmt:
+        %tmp.216 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.216 110 16 27 ];
+        %tmp.217 = lgetv %rectWidth.12;
+        symbol [ rectWidth %tmp.217 110 31 40 ];
+        %tmp.218 = lgetv %cornerRadius.16;
+        symbol [ cornerRadius %tmp.218 110 43 55 ];
+        %tmp.219 = sub %tmp.217 %tmp.218;
+        %tmp.220 = gte %tmp.216 %tmp.219;
+        bf %tmp.220 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_else_false;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_57_112_12_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 111 16 ]
+        %tmp.221 = lgetv %dc;
+        symbol [ dc %tmp.221 111 16 18 ];
+        symbol [ fillRoundedRectangle %tmp.222 111 19 39 ];
+        %tmp.222 = getv function %tmp.221 :fillRoundedRectangle;
+        %tmp.223 = lgetv %rectX.14;
+        symbol [ rectX %tmp.223 111 40 45 ];
+        %tmp.224 = lgetv %rectY.15;
+        symbol [ rectY %tmp.224 111 47 52 ];
+        %tmp.225 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.225 111 54 65 ];
+        %tmp.226 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.226 111 67 77 ];
+        %tmp.227 = lgetv %cornerRadius.16;
+        symbol [ cornerRadius %tmp.227 111 79 91 ];
+        invoke %tmp.221 %tmp.222(%tmp.223, %tmp.224, %tmp.225, %tmp.226, %tmp.227);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_57_112_12_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_else_false:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_112_19_114_12_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 113 16 ]
+        %tmp.228 = lgetv %dc;
+        symbol [ dc %tmp.228 113 16 18 ];
+        symbol [ fillRectangle %tmp.229 113 19 32 ];
+        %tmp.229 = getv function %tmp.228 :fillRectangle;
+        %tmp.230 = lgetv %rectX.14;
+        symbol [ rectX %tmp.230 113 33 38 ];
+        %tmp.231 = lgetv %rectY.15;
+        symbol [ rectY %tmp.231 113 40 45 ];
+        %tmp.232 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.232 113 47 58 ];
+        %tmp.233 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.233 113 60 70 ];
+        invoke %tmp.228 %tmp.229(%tmp.230, %tmp.231, %tmp.232, %tmp.233);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_112_19_114_12_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_110_12_114_12_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 117 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %lineSpacing.21 = local;
+        symbol [ lineSpacing %lineSpacing.21 117 16 27 ];
+        %tmp.234 = 6;
+        lputv %lineSpacing.21 %tmp.234;
+        symbol [ lineSpacing %lineSpacing.21 117 16 27 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 118 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %lineColor.22 = local;
+        symbol [ lineColor %lineColor.22 118 16 25 ];
+        symbol [ Graphics %tmp.235 118 28 36 ];
+        %tmp.235 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.236 118 37 50 ];
+        %tmp.236 = getv %tmp.235 :COLOR_LT_GRAY;
+        lputv %lineColor.22 %tmp.236;
+        symbol [ lineColor %lineColor.22 118 16 25 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 119 12 ]
+        %tmp.237 = lgetv %dc;
+        symbol [ dc %tmp.237 119 12 14 ];
+        symbol [ setColor %tmp.238 119 15 23 ];
+        %tmp.238 = getv function %tmp.237 :setColor;
+        %tmp.239 = lgetv %lineColor.22;
+        symbol [ lineColor %tmp.239 119 24 33 ];
+        symbol [ Graphics %tmp.240 119 35 43 ];
+        %tmp.240 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.241 119 44 61 ];
+        %tmp.241 = getv %tmp.240 :COLOR_TRANSPARENT;
+        invoke %tmp.237 %tmp.238(%tmp.239, %tmp.241);
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 122 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %xStart.23 = local;
+        symbol [ xStart %xStart.23 122 16 22 ];
+        %tmp.242 = lgetv %rectX.14;
+        symbol [ rectX %tmp.242 122 25 30 ];
+        lputv %xStart.23 %tmp.242;
+        symbol [ xStart %xStart.23 122 16 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 123 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %xEnd.24 = local;
+        symbol [ xEnd %xEnd.24 123 16 20 ];
+        %tmp.243 = lgetv %rectX.14;
+        symbol [ rectX %tmp.243 123 23 28 ];
+        %tmp.244 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.244 123 31 42 ];
+        %tmp.245 = add %tmp.243 %tmp.244;
+        lputv %xEnd.24 %tmp.245;
+        symbol [ xEnd %xEnd.24 123 16 20 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 124 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %yStart.25 = local;
+        symbol [ yStart %yStart.25 124 16 22 ];
+        %tmp.246 = lgetv %rectY.15;
+        symbol [ rectY %tmp.246 124 25 30 ];
+        lputv %yStart.25 %tmp.246;
+        symbol [ yStart %yStart.25 124 16 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 125 12 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop" ]
+        %yEnd.26 = local;
+        symbol [ yEnd %yEnd.26 125 16 20 ];
+        %tmp.247 = lgetv %rectY.15;
+        symbol [ rectY %tmp.247 125 23 28 ];
+        %tmp.248 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.248 125 31 41 ];
+        %tmp.249 = add %tmp.247 %tmp.248;
+        lputv %yEnd.26 %tmp.249;
+        symbol [ yEnd %yEnd.26 125 16 20 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 128 12 ]
+        for @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_test @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_incr @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_init:
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_begin" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_end" ]
+        %offset.27 = local;
+        symbol [ offset %offset.27 128 21 27 ];
+        %tmp.250 = 0;
+        lputv %offset.27 %tmp.250;
+        symbol [ offset %offset.27 128 21 27 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_test:
+        %tmp.251 = lgetv %offset.27;
+        symbol [ offset %tmp.251 128 33 39 ];
+        %tmp.252 = lgetv %filledWidth.18;
+        symbol [ filledWidth %tmp.252 128 42 53 ];
+        %tmp.253 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.253 128 56 66 ];
+        %tmp.254 = add %tmp.252 %tmp.253;
+        %tmp.255 = lt %tmp.251 %tmp.254;
+        bf %tmp.255 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_begin:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 129 16 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_stop" ]
+        %x1.28 = local;
+        symbol [ x1 %x1.28 129 20 22 ];
+        %tmp.256 = lgetv %xStart.23;
+        symbol [ xStart %tmp.256 129 25 31 ];
+        %tmp.257 = lgetv %offset.27;
+        symbol [ offset %tmp.257 129 34 40 ];
+        %tmp.258 = add %tmp.256 %tmp.257;
+        lputv %x1.28 %tmp.258;
+        symbol [ x1 %x1.28 129 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 130 16 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_stop" ]
+        %y1.29 = local;
+        symbol [ y1 %y1.29 130 20 22 ];
+        %tmp.259 = lgetv %yStart.25;
+        symbol [ yStart %tmp.259 130 25 31 ];
+        lputv %y1.29 %tmp.259;
+        symbol [ y1 %y1.29 130 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 131 16 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_stop" ]
+        %x2.30 = local;
+        symbol [ x2 %x2.30 131 20 22 ];
+        %tmp.260 = lgetv %xStart.23;
+        symbol [ xStart %tmp.260 131 25 31 ];
+        %tmp.261 = lgetv %offset.27;
+        symbol [ offset %tmp.261 131 34 40 ];
+        %tmp.262 = add %tmp.260 %tmp.261;
+        %tmp.263 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.263 131 43 53 ];
+        %tmp.264 = sub %tmp.262 %tmp.263;
+        lputv %x2.30 %tmp.264;
+        symbol [ x2 %x2.30 131 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 132 16 ]
+        [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_stop" ]
+        %y2.31 = local;
+        symbol [ y2 %y2.31 132 20 22 ];
+        %tmp.265 = lgetv %yEnd.26;
+        symbol [ yEnd %tmp.265 132 25 29 ];
+        lputv %y2.31 %tmp.265;
+        symbol [ y2 %y2.31 132 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 135 16 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_16_138_16_if_stmt:
+        %tmp.266 = lgetv %x2.30;
+        symbol [ x2 %tmp.266 135 20 22 ];
+        %tmp.267 = lgetv %xStart.23;
+        symbol [ xStart %tmp.267 135 25 31 ];
+        %tmp.268 = lt %tmp.266 %tmp.267;
+        bf %tmp.268 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_16_138_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_16_138_16_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_33_138_16_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 136 20 ]
+        %tmp.269 = lgetv %yStart.25;
+        symbol [ yStart %tmp.269 136 25 31 ];
+        %tmp.270 = lgetv %x2.30;
+        symbol [ x2 %tmp.270 136 35 37 ];
+        %tmp.271 = lgetv %rectHeight.13;
+        symbol [ rectHeight %tmp.271 136 40 50 ];
+        %tmp.272 = add %tmp.270 %tmp.271;
+        %tmp.273 = lgetv %xStart.23;
+        symbol [ xStart %tmp.273 136 53 59 ];
+        %tmp.274 = sub %tmp.272 %tmp.273;
+        %tmp.275 = add %tmp.269 %tmp.274;
+        lputv %y2.31 %tmp.275;
+        symbol [ y2 %y2.31 136 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 137 20 ]
+        %tmp.276 = lgetv %xStart.23;
+        symbol [ xStart %tmp.276 137 25 31 ];
+        lputv %x2.30 %tmp.276;
+        symbol [ x2 %x2.30 137 20 22 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_33_138_16_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_16_138_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_135_16_138_16_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 140 16 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_16_143_16_if_stmt:
+        %tmp.277 = lgetv %x1.28;
+        symbol [ x1 %tmp.277 140 20 22 ];
+        %tmp.278 = lgetv %xEnd.24;
+        symbol [ xEnd %tmp.278 140 25 29 ];
+        %tmp.279 = gt %tmp.277 %tmp.278;
+        bf %tmp.279 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_16_143_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_16_143_16_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_31_143_16_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 141 20 ]
+        %tmp.280 = lgetv %yStart.25;
+        symbol [ yStart %tmp.280 141 25 31 ];
+        %tmp.281 = lgetv %x1.28;
+        symbol [ x1 %tmp.281 141 35 37 ];
+        %tmp.282 = lgetv %xEnd.24;
+        symbol [ xEnd %tmp.282 141 40 44 ];
+        %tmp.283 = sub %tmp.281 %tmp.282;
+        %tmp.284 = add %tmp.280 %tmp.283;
+        lputv %y1.29 %tmp.284;
+        symbol [ y1 %y1.29 141 20 22 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 142 20 ]
+        %tmp.285 = lgetv %xEnd.24;
+        symbol [ xEnd %tmp.285 142 25 29 ];
+        lputv %x1.28 %tmp.285;
+        symbol [ x1 %x1.28 142 20 22 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_31_143_16_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_16_143_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_140_16_143_16_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 145 16 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_stmt:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_72_begin:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_56_begin:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_42_begin:
+        %tmp.286 = lgetv %x1.28;
+        symbol [ x1 %tmp.286 145 20 22 ];
+        %tmp.287 = lgetv %xStart.23;
+        symbol [ xStart %tmp.287 145 26 32 ];
+        %tmp.288 = gte %tmp.286 %tmp.287;
+        bf %tmp.288 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_36_145_42_true:
+        %tmp.289 = lgetv %x1.28;
+        symbol [ x1 %tmp.289 145 36 38 ];
+        %tmp.290 = lgetv %xEnd.24;
+        symbol [ xEnd %tmp.290 145 42 46 ];
+        %tmp.291 = lte %tmp.289 %tmp.290;
+        push %tmp.291;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_36_145_42_end:
+        %tmp.292 = phi [%tmp.288 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_42_begin] [%tmp.291 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_36_145_42_true] [%tmp.292 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_36_145_42_end];
+        bf %tmp.292 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_50_145_56_true:
+        %tmp.293 = lgetv %x2.30;
+        symbol [ x2 %tmp.293 145 50 52 ];
+        %tmp.294 = lgetv %xStart.23;
+        symbol [ xStart %tmp.294 145 56 62 ];
+        %tmp.295 = gte %tmp.293 %tmp.294;
+        push %tmp.295;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_50_145_56_end:
+        %tmp.296 = phi [%tmp.292 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_56_begin] [%tmp.295 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_50_145_56_true] [%tmp.296 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_50_145_56_end];
+        bf %tmp.296 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_66_145_72_true:
+        %tmp.297 = lgetv %x2.30;
+        symbol [ x2 %tmp.297 145 66 68 ];
+        %tmp.298 = lgetv %xEnd.24;
+        symbol [ xEnd %tmp.298 145 72 76 ];
+        %tmp.299 = lte %tmp.297 %tmp.298;
+        push %tmp.299;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_66_145_72_end:
+        %tmp.300 = phi [%tmp.296 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_20_145_72_begin] [%tmp.299 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_66_145_72_true] [%tmp.300 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_66_145_72_end];
+        bf %tmp.300 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_78_147_16_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 146 20 ]
+        %tmp.301 = lgetv %dc;
+        symbol [ dc %tmp.301 146 20 22 ];
+        symbol [ drawLine %tmp.302 146 23 31 ];
+        %tmp.302 = getv function %tmp.301 :drawLine;
+        %tmp.303 = lgetv %x1.28;
+        symbol [ x1 %tmp.303 146 32 34 ];
+        %tmp.304 = lgetv %y1.29;
+        symbol [ y1 %tmp.304 146 36 38 ];
+        %tmp.305 = lgetv %x2.30;
+        symbol [ x2 %tmp.305 146 40 42 ];
+        %tmp.306 = lgetv %y2.31;
+        symbol [ y2 %tmp.306 146 44 46 ];
+        invoke %tmp.301 %tmp.302(%tmp.303, %tmp.304, %tmp.305, %tmp.306);
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_78_147_16_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_145_16_147_16_if_end:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_91_148_12_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_incr:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 128 ]
+        %tmp.307 = lgetv %offset.27;
+        symbol [ offset %tmp.307 128 68 74 ];
+        %tmp.308 = lgetv %lineSpacing.21;
+        symbol [ lineSpacing %tmp.308 128 78 89 ];
+        %tmp.309 = add %tmp.307 %tmp.308;
+        lputv %offset.27 %tmp.309;
+        symbol [ offset %offset.27 128 68 74 ];
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_test;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_128_12_148_12_for_end:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_29_149_8_stop:
+        goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_8_149_8_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_107_8_149_8_if_end:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_32_40_152_4_stop:
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 129; @symbol_functiondef = [onHide,129,13,19]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 157; @symbol_functiondef = [onHide,157,13,19]; ]
     function onHide() as Void {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 133; @symbol_functiondef = [onExitSleep,133,13,24]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 161; @symbol_functiondef = [onExitSleep,161,13,24]; ]
     function onExitSleep() as Void {
     }
-    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 137; @symbol_functiondef = [onEnterSleep,137,13,25]; ]
+    [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 165; @symbol_functiondef = [onEnterSleep,165,13,25]; ]
     function onEnterSleep() as Void {
     }
 }
-[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 142; @symbol_functiondef = [getDate,142,9,16]; @symbol_return<0> = [String,142,22,28]; ]
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 170; @symbol_functiondef = [getDate,170,9,16]; @symbol_return<0> = [String,170,22,28]; ]
 function getDate() as String {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 143 3 ]
-    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_stop" ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 171 3 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_stop" ]
     %now.1 = local;
-    symbol [ now %now.1 143 7 10 ];
-    symbol [ Gregorian %tmp.1 143 13 22 ];
+    symbol [ now %now.1 171 7 10 ];
+    symbol [ Gregorian %tmp.1 171 13 22 ];
     %tmp.1 = getm $.Toybox.Time.Gregorian;
-    symbol [ info %tmp.2 143 23 27 ];
+    symbol [ info %tmp.2 171 23 27 ];
     %tmp.2 = getv function %tmp.1 :info;
-    symbol [ Time %tmp.3 143 28 32 ];
+    symbol [ Time %tmp.3 171 28 32 ];
     %tmp.3 = getm $.Toybox.Time;
-    symbol [ now %tmp.4 143 33 36 ];
+    symbol [ now %tmp.4 171 33 36 ];
     %tmp.4 = getv function %tmp.3 :now;
     %tmp.5 = invoke %tmp.3 %tmp.4();
-    symbol [ Time %tmp.6 143 40 44 ];
+    symbol [ Time %tmp.6 171 40 44 ];
     %tmp.6 = getm $.Toybox.Time;
-    symbol [ FORMAT_MEDIUM %tmp.7 143 45 58 ];
+    symbol [ FORMAT_MEDIUM %tmp.7 171 45 58 ];
     %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
     %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
     lputv %now.1 %tmp.8;
-    symbol [ now %now.1 143 7 10 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 144 3 ]
-    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_stop" ]
+    symbol [ now %now.1 171 7 10 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 172 3 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_stop" ]
     %dateString.2 = local;
-    symbol [ dateString %dateString.2 144 7 17 ];
-    symbol [ Lang %tmp.9 144 20 24 ];
+    symbol [ dateString %dateString.2 172 7 17 ];
+    symbol [ Lang %tmp.9 172 20 24 ];
     %tmp.9 = getm $.Toybox.Lang;
-    symbol [ format %tmp.10 144 25 31 ];
+    symbol [ format %tmp.10 172 25 31 ];
     %tmp.10 = getv function %tmp.9 :format;
     %tmp.11 = "$1$ $2$ $3$";
     %tmp.12 = newa 3;
     %tmp.13 = lgetv %now.1;
-    symbol [ now %tmp.13 145 12 15 ];
-    symbol [ day_of_week %tmp.14 145 16 27 ];
+    symbol [ now %tmp.13 173 12 15 ];
+    symbol [ day_of_week %tmp.14 173 16 27 ];
     %tmp.14 = getv %tmp.13 :day_of_week;
     %tmp.15 = dup %tmp.12;
     %tmp.16 = aputv %tmp.15 0 %tmp.14;
     %tmp.17 = lgetv %now.1;
-    symbol [ now %tmp.17 146 12 15 ];
-    symbol [ day %tmp.18 146 16 19 ];
+    symbol [ now %tmp.17 174 12 15 ];
+    symbol [ day %tmp.18 174 16 19 ];
     %tmp.18 = getv %tmp.17 :day;
     %tmp.19 = dup %tmp.16;
     %tmp.20 = aputv %tmp.19 1 %tmp.18;
     %tmp.21 = lgetv %now.1;
-    symbol [ now %tmp.21 147 12 15 ];
-    symbol [ month %tmp.22 147 16 21 ];
+    symbol [ now %tmp.21 175 12 15 ];
+    symbol [ month %tmp.22 175 16 21 ];
     %tmp.22 = getv %tmp.21 :month;
     %tmp.23 = dup %tmp.20;
     %tmp.24 = aputv %tmp.23 2 %tmp.22;
     %tmp.25 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.24);
     lputv %dateString.2 %tmp.25;
-    symbol [ dateString %dateString.2 144 7 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 150 4 ]
+    symbol [ dateString %dateString.2 172 7 17 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 178 4 ]
     %tmp.26 = lgetv %dateString.2;
-    symbol [ dateString %tmp.26 150 11 21 ];
+    symbol [ dateString %tmp.26 178 11 21 ];
     ret %tmp.26;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_142_29_151_0_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_170_29_179_0_stop:
 }
-[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 153; @symbol_functiondef = [getHeartRate,153,9,21]; @symbol_return<0> = [Number,153,27,33]; ]
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 181; @symbol_functiondef = [getHeartRate,181,9,21]; @symbol_return<0> = [Number,181,27,33]; ]
 function getHeartRate() as Number {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_153_34_159_0_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 154 4 ]
-    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_153_34_159_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_153_34_159_0_stop" ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_181_34_187_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 182 4 ]
+    [ "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_181_34_187_0_start" "_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_181_34_187_0_stop" ]
     %heartRate.1 = local;
-    symbol [ heartRate %heartRate.1 154 8 17 ];
-    symbol [ Activity %tmp.1 154 20 28 ];
+    symbol [ heartRate %heartRate.1 182 8 17 ];
+    symbol [ Activity %tmp.1 182 20 28 ];
     %tmp.1 = getm $.Toybox.Activity;
-    symbol [ getActivityInfo %tmp.2 154 29 44 ];
+    symbol [ getActivityInfo %tmp.2 182 29 44 ];
     %tmp.2 = getv function %tmp.1 :getActivityInfo;
     %tmp.3 = invoke %tmp.1 %tmp.2();
-    symbol [ currentHeartRate %tmp.4 154 47 63 ];
+    symbol [ currentHeartRate %tmp.4 182 47 63 ];
     %tmp.4 = getv %tmp.3 :currentHeartRate;
     lputv %heartRate.1 %tmp.4;
-    symbol [ heartRate %heartRate.1 154 8 17 ];
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 155 4 ]
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_4_157_4_if_stmt:
+    symbol [ heartRate %heartRate.1 182 8 17 ];
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 183 4 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_4_185_4_if_stmt:
     %tmp.5 = lgetv %heartRate.1;
-    symbol [ heartRate %tmp.5 155 8 17 ];
+    symbol [ heartRate %tmp.5 183 8 17 ];
     %tmp.6 = null;
     %tmp.7 = eq %tmp.5 %tmp.6;
-    bf %tmp.7 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_4_157_4_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_4_157_4_if_true:
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_27_157_4_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 156 8 ]
+    bf %tmp.7 @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_4_185_4_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_4_185_4_if_true:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_27_185_4_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 184 8 ]
     %tmp.8 = 0;
     lputv %heartRate.1 %tmp.8;
-    symbol [ heartRate %heartRate.1 156 8 17 ];
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_27_157_4_stop:
-    goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_4_157_4_if_end;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_155_4_157_4_if_end:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 158 4 ]
+    symbol [ heartRate %heartRate.1 184 8 17 ];
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_27_185_4_stop:
+    goto @_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_4_185_4_if_end;
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_183_4_185_4_if_end:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 186 4 ]
     %tmp.9 = lgetv %heartRate.1;
-    symbol [ heartRate %tmp.9 158 11 20 ];
+    symbol [ heartRate %tmp.9 186 11 20 ];
     ret %tmp.9;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_153_34_159_0_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_181_34_187_0_stop:
 }
-[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 161; @symbol_functiondef = [getHeartRateString,161,9,27]; @symbol_return<0> = [String,161,33,39]; ]
+[ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 189; @symbol_functiondef = [getHeartRateString,189,9,27]; @symbol_return<0> = [String,189,33,39]; ]
 function getHeartRateString() as String {
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_161_40_163_0_start:
-[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 162 4 ]
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_189_40_191_0_start:
+[ "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc" 190 4 ]
     %tmp.1 = self;
-    symbol [ getHeartRate %tmp.2 162 11 23 ];
+    symbol [ getHeartRate %tmp.2 190 11 23 ];
     %tmp.2 = getv function %tmp.1 :getHeartRate;
     %tmp.3 = invoke %tmp.1 %tmp.2();
-    symbol [ format %tmp.4 162 26 32 ];
+    symbol [ format %tmp.4 190 26 32 ];
     %tmp.4 = getv function %tmp.3 :format;
     %tmp.5 = "%d";
     %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
     ret %tmp.6;
-_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_161_40_163_0_stop:
+_Users_nathangasser_git_pioucraft_garmin_watchface_source_WatchFaceView_mc_189_40_191_0_stop:
 }
 [ @file = "/Users/nathangasser/git/pioucraft/garmin-watchface/source/WatchFaceView.mc"; @line = 1; ]
 <init> {

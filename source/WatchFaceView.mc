@@ -6,8 +6,12 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.Activity;
 
-
 class WatchFaceView extends WatchUi.WatchFace {
+
+    var _lastStepsMinute = null;
+    var _cachedSteps = 0;
+    var _cachedStepsGoal = 0;
+    var _cachedFillPercentage = 0.0;
 
     function initialize() {
         WatchFace.initialize();
@@ -44,20 +48,17 @@ class WatchFaceView extends WatchUi.WatchFace {
         HeartRateView.setText(getHeartRateString());
 
         var StepsView = View.findDrawableById("StepsLabel") as Text;
-        var steps = Toybox.ActivityMonitor.getInfo().steps;
-        
-        var stepsGoal = Toybox.ActivityMonitor.getInfo().stepGoal;
 
-        if (steps == null) {
-            steps = 0;
+        // Only update steps and progress bar once per minute
+        var currentMinute = clockTime.min;
+        if (_lastStepsMinute == null || _lastStepsMinute != currentMinute) {
+            _lastStepsMinute = currentMinute;
+            var info = Toybox.ActivityMonitor.getInfo();
+            _cachedSteps = info.steps != null ? info.steps : 0;
+            _cachedStepsGoal = info.stepGoal != null ? info.stepGoal : 1;
+            _cachedFillPercentage = (_cachedSteps.toFloat() / _cachedStepsGoal.toFloat());
         }
-        var fillPercentage = (steps.toFloat() / stepsGoal.toFloat());
-
-        StepsView.setText(Lang.format("$1$ steps", [steps]));
-
-
-
-
+        StepsView.setText(Lang.format("$1$ steps", [_cachedSteps]));
 
         // dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
         // dc.fillCircle(50, 100, 75);
@@ -66,8 +67,8 @@ class WatchFaceView extends WatchUi.WatchFace {
 
         View.onUpdate(dc);
 
-
         // Clamp value between 0 and 1
+        var fillPercentage = _cachedFillPercentage;
         if (fillPercentage < 0) {
             fillPercentage = 0;
         } else if (fillPercentage > 1) {
@@ -103,21 +104,48 @@ class WatchFaceView extends WatchUi.WatchFace {
         }
 
         // Draw the filled portion from left to right with rounded corners
-        // Note: fillRoundedRectangle fills the entire shape. We need to clip or draw carefully.
-        // A common approach is to fill the whole rounded rect first, then draw the unfilled part over it,
-        // or calculate the clipping region. For simplicity here, we'll fill a potentially non-rounded
-        // rectangle inside, which might not look perfectly rounded on the right edge when partially filled.
-        // For a perfect rounded fill, more complex drawing logic (like clipping) is needed.
         if (filledWidth > 0) {
+            // Fill in white
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            // Fill a rectangle for the filled portion. For perfect rounded corners on the fill,
-            // you might need to use clipping or draw two rounded rectangles (background and foreground).
-            // This simple fillRectangle will have sharp corners on the right side when partially filled.
-             if (filledWidth >= rectWidth - cornerRadius) { // If close to full, use fillRoundedRectangle
-             dc.fillRoundedRectangle(rectX, rectY, filledWidth, rectHeight, cornerRadius);
-             } else { // Otherwise, fill a standard rectangle (might look slightly off at the rounded end)
-             dc.fillRectangle(rectX, rectY, filledWidth, rectHeight);
-             }
+            if (filledWidth >= rectWidth - cornerRadius) {
+                dc.fillRoundedRectangle(rectX, rectY, filledWidth, rectHeight, cornerRadius);
+            } else {
+                dc.fillRectangle(rectX, rectY, filledWidth, rectHeight);
+            }
+
+            // Overlay gray diagonal lines
+            var lineSpacing = 6; // pixels between lines
+            var lineColor = Graphics.COLOR_LT_GRAY;
+            dc.setColor(lineColor, Graphics.COLOR_TRANSPARENT);
+
+            // Draw lines from top-left to bottom-right within the filled area
+            var xStart = rectX;
+            var xEnd = rectX + filledWidth;
+            var yStart = rectY;
+            var yEnd = rectY + rectHeight;
+
+            // Diagonal lines: for each offset, draw a line from (x, yStart) to (x - rectHeight, yEnd)
+            for (var offset = 0; offset < filledWidth + rectHeight; offset += lineSpacing) {
+                var x1 = xStart + offset;
+                var y1 = yStart;
+                var x2 = xStart + offset - rectHeight;
+                var y2 = yEnd;
+
+                // Clamp x2 to not go before xStart
+                if (x2 < xStart) {
+                    y2 = yStart + (x2 + rectHeight - xStart);
+                    x2 = xStart;
+                }
+                // Clamp x1 to not go past xEnd
+                if (x1 > xEnd) {
+                    y1 = yStart + (x1 - xEnd);
+                    x1 = xEnd;
+                }
+                // Only draw if within filled area
+                if (x1 >= xStart && x1 <= xEnd && x2 >= xStart && x2 <= xEnd) {
+                    dc.drawLine(x1, y1, x2, y2);
+                }
+            }
         }
         
 
