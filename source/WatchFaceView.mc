@@ -4,6 +4,7 @@ import Toybox.System;
 import Toybox.WatchUi;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
+import Toybox.Activity;
 
 
 class WatchFaceView extends WatchUi.WatchFace {
@@ -79,8 +80,11 @@ function getDate() as String {
 }
 
 function getHeartRate() as Number {
-    var heartrateIterator = Toybox.ActivityMonitor.getHeartRateHistory(1, true);
-    return heartrateIterator.next().heartRate;
+    var heartRate = Activity.getActivityInfo().currentHeartRate;
+    if (heartRate == null) {
+        heartRate = 0;
+    }
+    return heartRate;
 }
 
 function getHeartRateString() as String {
